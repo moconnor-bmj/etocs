@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+    <meta charset="utf-8"> <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+    <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+    <title>eTOCs</title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+
+    <!-- Web Font / @font-face : BEGIN -->
+    <!-- NOTE: If web fonts are not required, lines 10 - 27 can be safely removed. -->
+
+    <!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
+    <!--[if mso]>
+        <style>
+            * {
+                font-family: sans-serif !important;
+            }
+        </style>
+    <![endif]-->
+
+    <!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ -->
+    <!--[if !mso]><!-->
+    <!-- insert web font reference, eg: <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'> -->
+    <!--<![endif]-->
+
+    <!-- Web Font / @font-face : END -->
+
+    <!-- CSS Reset : BEGIN -->
+    <style>
+
+        /* What it does: Remove spaces around the email design added by some email clients. */
+        /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+        html,
+        body {
+            margin: 0 auto !important;
+            padding: 0 !important;
+            height: 100% !important;
+            width: 100% !important;
+        }
+
+        /* What it does: Stops email clients resizing small text. */
+        * {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        /* What it does: Centers email on Android 4.4 */
+        div[style*="margin: 16px 0"] {
+            margin: 0 !important;
+        }
+
+		ul {
+			-webkit-padding-start: 20px;
+			margin-top: -10px;
+		}
+
+		li {
+			list-style-type: initial;
+			list-style-position: inside;
+			text-indent: -20px;
+			margin: 10px 0;
+		}
+
+        /* What it does: Stops Outlook from adding extra spacing to tables. */
+        table,
+        td {
+            mso-table-lspace: 0pt !important;
+            mso-table-rspace: 0pt !important;
+        }
+
+        /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+        table {
+            border-spacing: 0 !important;
+            border-collapse: collapse !important;
+            table-layout: fixed !important;
+            margin: 0 auto !important;
+        }
+        table table table {
+            table-layout: auto;
+        }
+
+        /* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
+        a {
+            text-decoration: none;
+			color: #333;
+        }
+
+		/* Hover colours (intro article)*/
+
+		h2 a:hover {
+			text-decoration: none !important;
+		}
+
+        /* What it does: Uses a better rendering method when resizing images in IE. */
+        img {
+            -ms-interpolation-mode:bicubic;
+        }
+
+        /* What it does: A work-around for email clients meddling in triggered links. */
+        *[x-apple-data-detectors],  /* iOS */
+        .unstyle-auto-detected-links *,
+        .aBn {
+            border-bottom: 0 !important;
+            cursor: default !important;
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        /* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
+        .a6S {
+           display: none !important;
+           opacity: 0.01 !important;
+       }
+       /* If the above doesn't work, add a .g-img class to any image in question. */
+       img.g-img + div {
+           display: none !important;
+       }
+
+	   .fa, .far, .fas {
+			margin-right: 10px;
+			color: #333;
+		}
+
+        /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+        /* Create one of these media queries for each additional viewport size you'd like to fix */
+
+        /* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+        @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+            .email-container {
+                min-width: 320px !important;
+            }
+        }
+        /* iPhone 6, 6S, 7, 8, and X */
+        @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+            .email-container {
+                min-width: 375px !important;
+            }
+        }
+        /* iPhone 6+, 7+, and 8+ */
+        @media only screen and (min-device-width: 414px) {
+            .email-container {
+                min-width: 414px !important;
+            }
+        }
+
+		/* Nice underline*/
+
+		.niceUl {
+			display: inline;
+			/* text-shadow: 1px 1px #f5f6f9, -1px 1px #f5f6f9, -1px -1px #f5f6f9, 1px -1px #f5f6f9; */
+			background-image: linear-gradient(90deg, currentColor 100%, transparent 100%);
+			background-position: bottom;
+			background-repeat: no-repeat;
+			background-size: 100% 1px;
+			}
+		.niceUl::-moz-selection {
+			background-color: rgba(0, 150, 255, 0.3);
+			text-shadow: none;
+			}
+		.niceUl::selection {
+			background-color: rgba(0, 150, 255, 0.3);
+			text-shadow: none;
+			}
+
+		.niceUl a:hover {
+			background: none;
+			color: #f35f15;
+		}
+    </style>
+    <!-- CSS Reset : END -->
+	<!-- Reset list spacing because Outlook ignores much of our inline CSS. -->
+	<!--[if mso]>
+	<style type="text/css">
+		ul,
+		ol {
+			margin: 0 !important;
+		}
+		li {
+			margin-left: 30px !important;
+		}
+		li.list-item-first {
+			margin-top: 0 !important;
+		}
+		li.list-item-last {
+			margin-bottom: 10px !important;
+		}
+	</style>
+	<![endif]-->
+
+    <!-- Progressive Enhancements : BEGIN -->
+    <style>
+
+        /* What it does: Hover styles for buttons */
+        .button-td,
+        .button-a {
+            transition: all 100ms ease-in;
+        }
+	    .button-td-primary:hover,
+	    .button-a-primary:hover {
+	        background: #f35f15 !important;
+	        border-color: #f35f15 !important;
+			color: #fff !important;
+	    }
+
+        /* Media Queries */
+        @media screen and (max-width: 600px) {
+
+            .email-container {
+                width: 100% !important;
+                margin: auto !important;
+            }
+
+            /* What it does: Forces elements to resize to the full width of their container. Useful for resizing images beyond their max-width. */
+            .fluid {
+                max-width: 100% !important;
+                height: auto !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+
+            /* What it does: Forces table cells into full-width rows. */
+            .stack-column,
+            .stack-column-center {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                direction: ltr !important;
+            }
+            /* And center justify these ones. */
+            .stack-column-center {
+                text-align: center !important;
+            }
+
+            /* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+            .center-on-narrow {
+                text-align: center !important;
+                display: block !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                float: none !important;
+            }
+            table.center-on-narrow {
+                display: inline-block !important;
+            }
+
+            /* What it does: Adjust typography on small screens to improve readability */
+            .email-container p {
+                font-size: 17px !important;
+            }
+        }
+
+		@media only screen and (max-width: 500px) {
+			.noMob {
+				display: none;
+			}
+			.bmjlogo img {
+				width: 190px;
+				padding-top: 17px;
+			}
+			iframe {
+				height: 856px;
+			}
+
+		}
+
+		/* MOC start styling here */
+		.etoc-ed {
+			font-family: 'Source Serif Pro', serif;
+			font-size: 14px;
+			color: #333;
+		}
+		.etoc-author {
+			display: block;
+			margin-left: 20px;
+			font-family: 'Source Serif Pro', serif;
+			font-size: 14px;
+			color: #333;
+			font-style: italic;
+		}
+		a.art-title {
+			border-bottom: 1px solid #dedede;
+			font-size: 14px;
+		}
+
+		a.art-title:hover {
+			border-bottom: 1px solid #333;
+			/* color: #f35f15; */
+		}
+
+		a.etoc-anchor:hover {
+			border-bottom: 1px solid #f35f15 !important;
+		}
+
+	</style>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet">
+
+    <!-- Progressive Enhancements : END -->
+
+    <!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+
+</head>
+<!--
+	The email background color (#222222) is defined in three places:
+	1. body tag: for most email clients
+	2. center tag: for Gmail and Inbox mobile apps and web versions of Gmail, GSuite, Inbox, Yahoo, AOL, Libero, Comcast, freenet, Mail.ru, Orange.fr
+	3. mso conditional: For Windows 10 Mail
+-->
+<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #222222;">    <center style="width: 100%; ">
+    <!--[if mso | IE]>
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #222222;">
+    <tr>
+    <td>
+    <![endif]-->
+
+        <!-- Visually Hidden Preheader Text : BEGIN -->
+        <div style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
+            (Optional) This text will appear in the inbox preview, but not the email body. It can be used to supplement the email subject line or even summarize the email's contents. Extended text preheaders (~490 characters) seems like a better UX for anyone using a screenreader or voice-command apps like Siri to dictate the contents of an email. If this text is not included, email clients will automatically populate it using the text (including image alt text) at the start of the email's body.
+        </div>
+        <!-- Visually Hidden Preheader Text : END -->
+
+        <!-- Create white space after the desired preview text so email clients don’t pull other distracting text into the inbox preview. Extend as necessary. -->
+        <!-- Preview Text Spacing Hack : BEGIN -->
+        <div style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
+	        &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+        </div>
+        <!-- Preview Text Spacing Hack : END -->
+
+        <!-- Email Body : BEGIN -->
+        <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="margin: 0 auto;" class="email-container">
+	        <!-- Email Header : BEGIN -->
+            <tr class="noMob">
+                <td style="padding: 20px 0; text-align: center">
+                    <img src="http://placehold.it/468x60/ffffff/f35f15/?text=Full+Banner+hidden+mobile" width="468" height="60" alt="alt_text" border="0" >
+                </td>
+            </tr>
+	        <!-- Email Header : END -->
+
+            <!-- Hero Image, Flush : BEGIN -->
+            <tr>
+                <td style="background-color: #f35f15;">
+					
+					<div class="jnnplogo" style="float: left; padding-top: 8px; color: #fff; font-family: sans-serif; padding-left: 20px;">
+						<img src="assets/mh-logo.png" alt="alt_text">
+					</div>
+					<div class="bmjlogo" style="float: right; background-color: #fff; padding-top: 12px;">
+						<img src="assets/bmjj-logo.png" height="" alt="alt_text" border="0" class="g-img">
+					</div>
+                </td>
+            </tr>
+            <!-- Hero Image, Flush : END -->
+
+            <!-- 1 Column Text + Button : BEGIN -->
+            <tr>
+                <td style="background-color: #ffffff;">
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                            <td style="padding: 20px; font-family: sans-serif; font-size: 15px; line-height: 20px;">
+								<h1 style="font-family: 'Source Serif Pro', serif; line-height: 30px; color: #333;"><a href="https://mh.bmj.com/content/44/2?current-issue=y" title="Current issue of Medical Humanities">TOC alert for Journal of Medical Humanities</a></h1>
+
+								<p style="margin-bottom: -30px; font-size: 13.5px; font-family: 'Source Serif Pro', serif; width: 70%;">
+									<a class="etoc-anchor" href="#editorial" style="color: #f35f15">Editorial</a> | <a href="#pain" style="color: #f35f15">Pain and paradoxes</a> | <a href="#controversies" style="color: #f35f15">Current controversies</a> | <a href="#misc" style="color: #f35f15">Miscellaneous</a></p>
+								<!-- <p style="margin: 0 0 10px;">Welcome to the .....  </p>
+								<p style="margin: 0 0 10px;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent laoreet malesuada cursus. </p>
+								<h3 style="float: right;font-family: 'Source Serif Pro', serif; margin-top: -10px;    color: #333; ">The Editor</h3> -->
+                                <!-- <ul style="padding: 0; margin: 0; list-style-type: disc;">
+									<li style="margin:0 0 10px 20px;" class="list-item-first">A list item.</li>
+									<li style="margin:0 0 10px 20px;">Another list item here.</li>
+									<li style="margin: 0 0 0 20px;" class="list-item-last">Everyone gets a list item, list items for everyone!</li>
+								</ul> -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0 20px 20px;">
+                                <!-- Button : BEGIN -->
+                                <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: auto;">
+                                    <tr>
+                                        <td class="button-td button-td-primary" style="border-radius: 4px; background: #222222;">
+											<!-- <a class="button-a button-a-primary" href="https://google.com/" style="background: #f35f15; font-family: sans-serif; font-size: 15px; line-height: 15px; text-decoration: none; padding: 13px 17px; color: #ffffff; display: block; border-radius: 4px;">Centered CTA Button</a> -->
+										</td>
+                                    </tr>
+                                </table>
+                                <!-- Button : END -->
+                            </td>
+                        </tr>
+
+                    </table>
+                </td>
+            </tr>
+            <!-- 1 Column Text + Button : END -->
+
+            <!-- Background Image with Text : BEGIN -->
+            <tr>
+                <!-- Bulletproof Background Images c/o https://backgrounds.cm -->
+                <td valign="middle" style="text-align: center; background-image: url('http://placehold.it/600x230/eeeeee/eeeeee'); background-color: #eee; background-position: center center !important; background-size: cover !important; border-top: 3px solid #f35f15; border-bottom: 3px solid #f35f15;">
+	                <!--[if gte mso 9]>
+	                <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;height:175px; background-position: center center !important;">
+	                <v:fill type="tile" src="http://placehold.it/600x230/222222/666666" color="#222222" />
+	                <v:textbox inset="0,0,0,0">
+	                <![endif]-->
+	                <div>
+	                    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+	                        <tr>
+	                            <td valign="middle" style="text-align: left; padding: 30px; font-family: sans-serif; font-size: 15px; line-height: 20px;">
+									
+										<div style="float: right; color: #fff; width: 100px; height: 100px; border-radius: 50%; background-color: #f35f15; border: 3px solid #fff; margin-top: -100px; margin-bottom: 10px;"><span style="font-family: 'Source Serif Pro', serif; text-align: center; display: inline-block; margin: 29px 5px 10px 15px;; font-size: 19px; padding: -1px 0 0 0; letter-spacing: 1px;
+											line-height: 1.25;">Vol: 44<br>Issue: 2</span>
+										</div>
+										<img src="assets/medhum-2018-June-44-2-71-F1.medium.gif" style="float: left; margin:0 20px 0 0; width: 200px; box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);">
+										
+										<h2 style="font-family: 'Source Serif Pro', serif; color: #333;font-weight: bold; line-height: 1.25; font-size: 25px;margin: -3px 0 0 0;"><a href="https://mh.bmj.com/content/44/2/71" style="color: #f35f15; text-decoration: underline;">Editor’s note: pain and paradoxes</a></h2>
+										
+										<p style="color: #333;">One of the most enduring lessons of the humanities and social sciences—and one that I continue to rediscover in new ways—regards the absolute centrality of connections, relationships, even entanglements to our shared human experience and so also to our health. </p>
+										
+										<p style="float: right; "><a class="button-a button-a-primary" href="https://google.com/" style="background: #fff; font-family: sans-serif; font-size: 15px; line-height: 15px; text-decoration: none; padding: 13px 17px; color: #f35f15; border-radius: 4px;">Read More →</a></p>
+										<p style="font-family: 'Source Serif Pro', serif; font-size: 14px; color: #333;">By <strong>Brandy Schillace</strong><br />Editor-in-Chief</p>
+										
+									
+	                            </td>
+	                        </tr>
+	                    </table>
+	                </div>
+	                <!--[if gte mso 9]>
+	                </v:textbox>
+	                </v:rect>
+	                <![endif]-->
+	            </td>
+	        </tr>
+	        <!-- Background Image with Text : END -->
+
+	        <!-- 2 Even Columns : BEGIN -->
+	        <tr>
+	            <td dir="rtl" valign="top" width="100%">
+	                <table role="presentation" border="0" cellpadding="10" cellspacing="0" width="100%" style="background-color: #fff;">
+	                    <tr>
+	                        <!-- Column : BEGIN -->
+	                        <!-- <td width="33.33%" class="stack-column-center">
+	                            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+	                                <tr>
+	                                    <td dir="ltr" valign="top" style="padding: 0 10px;">
+	                                        <img src="http://placehold.it/170" width="170" height="170" alt="alt_text" border="0" class="center-on-narrow" style="height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555;">
+	                                    </td>
+	                                </tr>
+	                            </table>
+	                        </td> -->
+	                        <!-- Column : END -->
+	                        <!-- Column : BEGIN -->
+	                        <td width="100%" class="stack-column-center">
+	                            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+	                                <tr>
+	                                    <td dir="ltr" valign="top" style="font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; padding: 10px;" class="center-on-narrow">
+											
+											<h2 style="font-family: 'Source Serif Pro', serif; color: #333;font-weight: bold; line-height: 1.25; font-size: 25px;     margin: 0 0 -20px 0;;"><a href="https://mh.bmj.com/content/44/2/71"><i class="far fa-clock" style="font-size: 25px; top: 3px; border-bottom: none;"></i>Also in this issue</a></h2>
+												<!-- <h3 id="editorial" style="font-family: 'Source Serif Pro', serif; color: #f35f15; font-size: 20px; margin-top: 30px;">Editorial</h3>
+												<ul>
+													<li> <h3 style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: normal;"><a href="#">How useful are simple clinical features and non-invasive imaging at predicting an underlying structural cause of acute intracerebral haemorrhage?</a></h3></li>
+													<li> <h3 style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: normal;"><a href="#">Deep brain stimulation: awake or asleep: it comes with a price either way</a></h3></li>
+													<li> <h3 style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: normal;"><a href="#">AEDs or no AEDs during pregnancy? That is the question</a></h3></li>
+												</ul> -->
+
+												
+												<h3 id="pain" style="font-family: 'Source Serif Pro', serif; color: #f35f15; font-size: 20px; margin-top: 30px;">Pain and paradoxes</h3>
+												<ul>
+													<li> <h3 style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: normal;"><a class="art-title" href="https://mh.bmj.com/content/44/2/72">Pain and the human condition</a></h3>
+													<span class="etoc-author">Daniel S Goldberg</span></li>
+													
+													<li> <h3 style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: normal;"><a class="art-title" href="https://mh.bmj.com/content/44/2/74">Images as catalysts for meaning-making in medical pain encounters: a multidisciplinary analysis</a><span class="etoc-author">Deborah Padfield, Helen Omand, Elena Semino et al</span></h3></li>
+													
+													<li> <h3 style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: normal;"><a class="art-title" href="https://mh.bmj.com/content/44/2/74">Shifting understandings of labour pain in Canadian medical history</a><span class="etoc-author">Whitney Wood</span></h3></li>
+													
+													<li> <h3 style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: normal;"><a class="art-title" href="https://mh.bmj.com/content/44/2/74">Pain as performance: re-virginisation in Turkey</a><span class="etoc-author">Hande Güzel</span></h3></li>
+												</ul>
+												
+												<h3 id="controversies" style="font-family: 'Source Serif Pro', serif; color: #f35f15; font-size: 20px; margin-top: 30px;">Current controversies</h3>
+												<ul>
+													<li> <h3 style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: normal;"><a class="art-title" href="https://mh.bmj.com/content/44/2/137">At the intersection of self and not-self: finding the locus of ‘self’ in autoimmunity</a><span class="etoc-author">James David Katz</span></h3></li>
+													<li> <h3 style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: normal;"><a class="art-title" href="https://mh.bmj.com/content/44/2/140">A moment for compassion: emerging rhetorics in end-of-life care</a><span class="etoc-author">Shahaduz Zaman, Alexander Whitelaw, Naomi Richards et al</span></h3></li>
+												</ul>
+
+												<h3 id="misc" style="font-family: 'Source Serif Pro', serif; color: #f35f15; font-size: 20px; margin-top: 30px;">Miscellaneous</h3>
+												<ul>
+													<li> <h3 style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: normal;"><a class="art-title" href="https://mh.bmj.com/content/44/2/144">2017 Thank you to our reviewers</a></h3></li>
+												</ul>
+	                                    </td>
+	                                </tr>
+								</table>
+
+	                        </td>
+	                        <!-- Column : END -->
+	        </tr>
+	        <!-- 3 Even Columns : END -->
+
+	        <!-- Thumbnail Left, Text Right : BEGIN -->
+	        <tr>
+	            <td dir="ltr" valign="top" width="100%" style="padding: 10px; text-align: center">
+	                <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+	                    <tr>
+	                        <!-- Column : BEGIN -->
+	                        <td class="stack-column-center">
+	                            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: -40px !important;">
+	                                <tr>
+	                                    <td dir="ltr" valign="top">
+	                                        <img src="http://placehold.it/300x250/993366/ffffff/?text=MPU+Advert" width="300" height="250" alt="alt_text" border="0" class="center-on-narrow" style="padding: 4px; border: 1px solid #fff;height: auto; background: #fff; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555;">
+	                                    </td>
+	                                </tr>
+	                            </table>
+	                        </td>
+
+	                    </tr>
+	                </table>
+	            </td>
+	        </tr>
+	        <!-- Thumbnail Left, Text Right : END -->
+
+	       
+	        <tr>
+	            <td aria-hidden="true" height="40" style="font-size: 0px; line-height: 0px;">
+	                &nbsp;
+	            </td>
+	        </tr>
+	        <tr>
+					<div>
+							<table style="background-color: #2a6ebb;" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+								<tr>
+									<td valign="middle" style="text-align: left; padding: 20px 40px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #ffffff;">
+											<i class="fas fa-user-edit" style="float: left; padding-top: 20px; font-size: 33px; border-bottom: none; color: #fff"></i><h2 style="display: inline-block; font-family: 'Source Serif Pro', serif; color: #fff; font-weight: normal; font-size: 34px; margin-bottom: 0;">Authors</h2>
+										<p style="margin: 20px 0 0 0;">
+											JNNP accepts submissions of a wide range of article types, including review articles and original research.
+												The Author Information section provides specific article requirements to help you turn your research into an article suitable for JNNP.</p>
+												<p style="margin: 20px 0 0 0;">Information is also provided on editorial policies and open access.</p>
+												
+												<p style="text-align: center;"><a class="button-a button-a-primary" href="https://google.com/" style="background: #fff; font-family: sans-serif; font-size: 15px;line-height: 15px; text-decoration: none; padding: 13px 17px; color: #2a6ebb ; display: inline-block; border-radius: 4px; max-width: 150px;">Author information</a>&nbsp;&nbsp;&nbsp;<a class="button-a button-a-primary" href="https://google.com/" style="background: #fff; font-family: sans-serif; font-size: 15px; line-height: 15px; text-decoration: none; padding: 13px 17px; color: #2a6ebb; display: inline-block; border-radius: 4px; max-width: 150px;">Submit a paper</a></p>
+										
+									</td>
+								</tr>
+							</table>
+						</div>
+			</tr>>
+	        <tr>
+	            <td style="background-color: #ffffff;">
+						<iframe src="https://jobs.bmj.com/widget/bootstrap/job/#i=222" id="mdgxWidgetiFrame" style="width: 99%; height: 797px !important; background: 0; border: 1px solid #fff;" frameBorder="1"></iframe>
+	            </td>
+			</tr>
+			<tr>
+					<td style="background-color: #ffffff;">
+						<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+							<tr>
+								<td style="padding: 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
+									<div style="text-align: center;"><img src="assets/socmed-horiz.png" width="500px"></div>
+									Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent laoreet malesuada cursus. Maecenas scelerisque congue eros eu posuere. Praesent in felis ut velit pretium lobortis rhoncus ut&nbsp;erat.
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+	        <!-- 1 Column Text : END -->
+
+	    </table>
+	    <!-- Email Body : END -->
+
+	    <!-- Email Footer : BEGIN -->
+        <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="margin: 0 auto;" class="email-container">
+	        <tr>
+	            <td style="padding: 20px; font-family: sans-serif; font-size: 12px; line-height: 15px; text-align: center; color: #888888;">
+	                <webversion style="color: #cccccc; text-decoration: underline; font-weight: bold;">View as a Web Page</webversion>
+	                <br><br>
+	                The BMJ<br><span class="unstyle-auto-detected-links">
+							BMA House,<br>
+							Tavistock Square,<br> 
+							London WC1H 9JR,<br>
+							United Kingdom.</span>
+	                <br><br>
+	                <unsubscribe style="color: #888888; text-decoration: underline;">unsubscribe</unsubscribe>
+	            </td>
+	        </tr>
+	    </table>
+	    <!-- Email Footer : END -->
+
+	    <!-- Full Bleed Background Section : BEGIN -->
+	    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #2a6ebb;">
+	        <tr>
+	            <td valign="top">
+	                <div style="max-width: 600px; margin: auto;" class="email-container">
+	                    <!--[if mso]>
+	                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" align="center">
+	                    <tr>
+	                    <td>
+	                    <![endif]-->
+	                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+	                        <tr>
+	                            <td style="padding: 20px; text-align: left; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #ffffff;">
+	                                <p style="margin: 0; font-size: 11px;">BMJ is a global healthcare knowledge provider which advances healthcare worldwide by sharing knowledge and expertise to improve experiences, outcomes and value. http://bmj.com/company 
+
+										This email and any attachments are confidential. If you have received this email in error, please do not use it in anyway. Please also kindly notify us immediately by reply and remove it from your system. 
+										
+										Any personal views expressed in this email are those of the individual and may not represent those of BMJ. 
+										
+										The recipient should check this email and any attachments for presence of viruses. BMJ accepts no liability for damage caused by any virus transmitted by this email. Emails sent or received by BMJ may be monitored, including monitoring for size, traffic, distribution and content. 
+										
+										BMJ Publishing Group Limited trading as "BMJ".
+										A private limited company, registered in England and Wales under registration number 03102371.
+										Registered office: BMA House, Tavistock Square, London WC1H 9JR, UK.
+										Copyright © 2018 by BMJ Publishing Group Ltd.
+										<a href="#">Unsubscribe</a> from or <a href="#">edit your subscription</a> to this or any email alert</p>
+	                            </td>
+	                        </tr>
+	                    </table>
+	                    <!--[if mso]>
+	                    </td>
+	                    </tr>
+	                    </table>
+	                    <![endif]-->
+	                </div>
+	            </td>
+	        </tr>
+	    </table>
+	    <!-- Full Bleed Background Section : END -->
+
+    <!--[if mso | IE]>
+    </td>
+    </tr>
+    </table>
+    <![endif]-->
+    </center>
+</body>
+</html>
