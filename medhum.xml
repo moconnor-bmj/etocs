@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" journal_code="medhum" xsi:noNamespaceSchemaLocation="bmj-schema.xsd">
+   <boolean>
+      <is_open_access>FALSE</is_open_access>
+      <has_ppv>TRUE</has_ppv>
+      <is_continuous_publication>FALSE</is_continuous_publication>
+      <has_pap>TRUE</has_pap>
+      <has_impact_factor>FALSE</has_impact_factor>
+      <has_default_cover_image>TRUE</has_default_cover_image>
+      <has_toc_abstract_popups>FALSE</has_toc_abstract_popups>
+      <has_collections>FALSE</has_collections>
+      <is_issueless>FALSE</is_issueless>
+      <has_crossmark>TRUE</has_crossmark>
+      <has_cross_searching>FALSE</has_cross_searching>
+      <has_mobile_voucher>TRUE</has_mobile_voucher>
+      <has_pdf_stamper>TRUE</has_pdf_stamper>
+	  <has_default_cover_img>TRUE</has_default_cover_img>
+	  <archive_date_grouping_label>TRUE</archive_date_grouping_label>
+   </boolean>
+   <strings>
+      <jcode>medhum</jcode>
+      <impact_factor_value></impact_factor_value>
+      <journal_title>Medical Humanities</journal_title>
+	  <journal_logo>http://resources.bmj.com/repository/journals-network-project/images/journal-logos/logo-mh.svg</journal_logo>
+      <site_code>97</site_code>
+      <society_sso></society_sso>
+      <print_issn>1468-215X</print_issn>
+      <electronic_issn>1473-4265</electronic_issn>
+      <ppv_article_price></ppv_article_price>
+      <copyright>Copyright &#xA9; 2017 by the BMJ Publishing Group Ltd &amp; Institute of Medical Ethics. All rights reserved.</copyright>
+      <default_color>f35f15</default_color>
+      <google_analytics_code></google_analytics_code>
+      <google_tag_manager_id>GTM-WCJFW6</google_tag_manager_id>
+      <homepage_about_snippet> 
+	  <![CDATA[
+	  <em>Medical Humanities</em> is a leading international journal that reflects the whole field of medical humanities. <em>Medical Humanities</em> aims to encourage a high academic standard for this evolving and developing subject and to enhance professional and public discussion. It features original articles relevant to the delivery of healthcare, the formulation of public health policy, the experience of being ill and of caring for those who are ill, as well as case conferences, educational case studies, book, film, and art reviews, editorials, correspondence, news and notes. <em>Medical Humanities</em> is an official journal of the <a href="http://www.instituteofmedicalethics.org/website/">Institute of Medical Ethics</a>. 
+	  ]]>
+	  </homepage_about_snippet>
+      <archive_page_snippet>
+	  <![CDATA[ 
+          <p>Full Text and Abstracts: June 2000 - Present</p>
+        ]]>
+	  </archive_page_snippet>
+      <rss_page_snippet>
+      <![CDATA[ 
+<p>A RSS feed is a computer-readable file that summarises the information published on a web site. Heart Online feeds provide headlines, abstracts (where available) and links to new articles.</p>
+
+<p>You can view RSS feeds by installing software called an &#39;RSS reader&#39;, &#39;feed reader&#39; or &#39;news reader&#39; or by using a web-based feed reader such as&nbsp;<a href="http://www.bloglines.com/myblogs">Bloglines</a>,&nbsp;<a href="http://www.feedzilla.com/">FeedZilla</a>&nbsp;or&nbsp;<a href="http://my.yahoo.com/">My Yahoo!</a>. If you run your own website, you can display the latest articles from this journal on your own site using our RSS feeds.</p>
+
+<p>The full list of BMJ Journals RSS feeds is available as an&nbsp;<a href="http://group.bmj.com/group/subscriptions-and-sales/institutional-support-services/bmjrssfeeds.opml">OPML file</a>&nbsp;which can be used to bulk import our RSS feed data into an RSS reader.</p>
+
+<p>The following RSS feeds are available:</p>
+
+<p>&nbsp;<a href="http://heart.bmj.com/rss/current.xml">Current issue only</a></p>
+
+<p>&nbsp;<a href="http://heart.bmj.com/rss/recent.xml">Recent issues</a></p>
+
+<p>&nbsp;<a href="http://heart.bmj.com/rss/ahead.xml">Online First</a></p>
+
+<p>&nbsp;<a href="http://heart.bmj.com/rss/mfr.xml">Most Frequently Read Articles</a></p>
+
+<p>&nbsp;<a href="http://heart.bmj.com/rss/ahead.xml">Online First</a></p>
+
+<h3>Section Feeds</h3>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://heart.bmj.com/rss/Acute_coronary_syndromes.xml">Acute coronary syndromes</a></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://heart.bmj.com/rss/Cardiovascular_surgery.xml">Cardiovascular surgery</a></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://heart.bmj.com/rss/Editorials.xml">Editorials</a></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://heart.bmj.com/rss/Education_in_Heart.xml">Education in Heart</a></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://heart.bmj.com/rss/Epidemiology.xml">Epidemiology</a></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://heart.bmj.com/rss/Heart_failure.xml">Heart failure</a></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://heart.bmj.com/rss/Heart_rhythm_disorders.xml">Heart rhythm disorders</a></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://heart.bmj.com/rss/Journal_scan.xml">Journal scan</a></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://heart.bmj.com/rss/Miscellanea.xml">Miscellanea</a></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://heart.bmj.com/rss/PostScript.xml">PostScript</a></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://heart.bmj.com/rss/Systematic_review.xml">Systematic review</a></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://heart.bmj.com/rss/Valvular_heart_disease.xml">Valvular heart disease</a></p>
+      ]]>
+      </rss_page_snippet>
+      <article_footer_marketing_slot>
+        <![CDATA[ 
+          <iframe src="http://jobs.bmj.com/widget/bootstrap/job/#i=184" id="mdgxWidgetiFrame" title="careers widget"></iframe>
+
+          <script type="text/javascript" src="//trendmd.s3.amazonaws.com/trendmd.min.js"></script>
+
+          <script type="text/javascript">TrendMD.register(
+          {journal_id: 11108, element: '#trendmd-suggestions', track_id: null}
+          );</script>
+
+          <div id="trendmd-suggestions"></div>
+        ]]> 
+      </article_footer_marketing_slot>
+      <article_header_marketing_slot></article_header_marketing_slot>
+      <back_to_site_url>http://mh.bmj.com/</back_to_site_url>
+      <copyright_notice_label>Copyright information</copyright_notice_label>
+      <citation_format>v1issue</citation_format>
+      <citation_format_pap>v1pap</citation_format_pap>
+      <subscribe_url>http://mh.bmj.com/pages/subscribe/</subscribe_url>
+	  <archive_sort_order>ppub</archive_sort_order>
+	  <email_eletters>mh@bmj.com</email_eletters>
+	  <email_eletters_moderator>mh@bmj.com</email_eletters_moderator>
+	  <email_site_default>support@bmj.com</email_site_default>
+	  <default_cover_img_url>http://mh.bmj.com/widget/public/current-issue/cover.gif</default_cover_img_url>
+   </strings>
+   <menus>
+      <journal_menu>
+         <menu>
+            <menu_title>Latest content</menu_title>
+            <menu_url>content/early/recent</menu_url>
+         </menu>
+         <menu>
+            <menu_title>Current issue</menu_title>
+            <menu_url>content/current</menu_url>
+         </menu>
+         <menu>
+            <menu_title>Archive</menu_title>
+            <menu_url>content/by/year</menu_url>
+         </menu>
+         <menu>
+            <menu_title>Authors</menu_title>
+            <menu_url>http://mh.bmj.com/pages/authors/</menu_url>
+         </menu>
+         <menu>
+            <menu_title>About</menu_title>
+            <menu_url>http://mh.bmj.com/pages/about/</menu_url>
+         </menu>
+      </journal_menu>
+      <journal_publish>
+         <menu>
+            <menu_title>Instructions for authors</menu_title>
+            <menu_url>http://mh.bmj.com/pages/authors/</menu_url>
+         </menu>
+         <menu>
+            <menu_title>Author toolbox</menu_title>
+            <menu_url>http://authors.bmj.com/</menu_url>
+         </menu>
+         <menu>
+            <menu_title>Submit a paper</menu_title>
+            <menu_url>http://mc.manuscriptcentral.com/mh</menu_url>
+         </menu>
+      </journal_publish>
+      <footers>
+        <menu>
+            <menu_title>Content</menu_title>
+            <menu_url />
+			<menu_item title="Latest content">content/early/recent</menu_item>
+            <menu_item title="Current issue">content/current</menu_item>
+            <menu_item title="Archive">content/by/year</menu_item>
+            <menu_item title="Browse by topic">http://mh.bmj.com/pages/browse-by-topic/</menu_item>
+			<menu_item title="Most read articles">http://mh.bmj.com/pages/most-read-articles/</menu_item>
+         </menu>
+         <menu>
+            <menu_title>Journal</menu_title>
+            <menu_url />
+            <menu_item title="About">http://mh.bmj.com/pages/about/</menu_item>
+            <menu_item title="Editorial board">http://mh.bmj.com/pages/editorial-board/</menu_item>
+            <menu_item title="Thank you to our reviewers">http://mh.bmj.com/pages/thank-you-to-our-reviewers/</menu_item>
+			<menu_item title="Sign up for email alerts">http://mh.bmj.com/alerts/toc/edit?destination=</menu_item>
+            <menu_item title="Subscribe" target="_blank">http://mh.bmj.com/pages/subscribe/</menu_item>
+         </menu>
+         <menu>
+            <menu_title>Authors</menu_title>
+            <menu_url />
+            <menu_item title="Instructions for authors">http://mh.bmj.com/pages/authors/</menu_item>
+            <menu_item title="Submit an article" target="_blank">http://mc.manuscriptcentral.com/mh</menu_item>
+            <!-- <menu_item title="Track your article" target="_blank">http://journals.bmj.com/site/authors/PublishingAtWork.pdf</menu_item> -->
+            <menu_item title="Open Access at BMJ">http://openaccess.bmj.com/</menu_item>
+         </menu>
+         <menu>
+            <menu_title>Help</menu_title>
+            <menu_url />
+            <menu_item title="Contact us">http://mh.bmj.com/pages/contact-us/</menu_item>
+            <menu_item title="Reprints" target="_blank">http://journals.bmj.com/cgi/reprintform</menu_item>
+            <menu_item title="Permissions" target="_blank">http://www.bmj.com/company/products-services/rights-and-licensing/permissions/</menu_item>
+            <menu_item title="Advertising" target="_blank">http://www.bmj.com/company/contact-us/advertising-sponsorship/</menu_item>
+            <menu_item title="Feedback form" target="_blank">http://myaccount.bmj.com/myaccount/customerservice/salesforce-form.html</menu_item>
+         </menu>
+      </footers>
+   </menus>
+   <complex>
+      <societies>
+        <society society_name="Institute of Medical Ethics" society_url="http://www.instituteofmedicalethics.org/" society_logo_url="http://resources.bmj.com/repository/journals-network-project/images/society-logos/society-logo-ime.png" />
+      </societies>
+      <learning_links></learning_links>   
+      <cross_searching></cross_searching>
+      <social_links>
+	    <social_link name="RSS" url="http://mh.bmj.com/pages/rss-feeds" logo_url="icon-rss" />
+        <social_link name="Twitter" url="http://twitter.com/MedHums_BMJ" logo_url="icon-twitter"/>
+        <social_link name="Facebook" url="http://www.facebook.com/Medical.Humanities" logo_url="icon-facebook" />
+        <social_link name="Blog" url="http://blogs.bmj.com/medical-humanities/" logo_url="icon-blog" />
+		<social_link name="SoundCloud" url="https://soundcloud.com/bmjpodcasts/sets/medical-humanities-podcast" logo_url="icon-soundcloud" />		
+        </social_links>
+      <related_journals>
+        <related_journal>
+          <name>Journal of Medical Ethics</name>
+          <url>http://jme.bmj.com/</url>
+          <impact_factor>1.764</impact_factor>
+          <cover_image>http://jme.bmj.com/widget/public/current-issue/cover.gif</cover_image>
+        </related_journal>
+      </related_journals>
+      <member_login></member_login>
+      <advanced_pages></advanced_pages>       
+      <video_player></video_player>
+   </complex>
+</record>
