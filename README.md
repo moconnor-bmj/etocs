@@ -1,4 +1,4 @@
-# Journals e-TOC’s: Redesign and Development:
+Journals e-TOC’s: Redesign and Development: Update
 
   
 
@@ -9,13 +9,13 @@ A few points:
 -   Sample Colour versions:
     
 
--   [Journal of Neurology, Neurosurgery & Psychiatry](https://moconnor-bmj.github.io/etocs/1/etoc-temp2-jnnp.html)
-    
--   [Medical Humanities](https://moconnor-bmj.github.io/etocs/1/etoc-temp2-mh.html)
-    
--   [Evidence Based Medicine](https://moconnor-bmj.github.io/etocs/1/etoc-temp2-ebm.html)
-    
--   Vets sample & CP versions very similar - in progress.
+	-   [Journal of Neurology, Neurosurgery & Psychiatry](https://moconnor-bmj.github.io/etocs/1/etoc-temp2-jnnp.html)
+	    
+	-   [Medical Humanities](https://moconnor-bmj.github.io/etocs/1/etoc-temp2-mh.html)
+	    
+	-   [Evidence Based Medicine](https://moconnor-bmj.github.io/etocs/1/etoc-temp2-ebm.html)
+	    
+	-   Vets sample & CP versions very similar - in progress.
     
 
 -   Using logos as currently designed necessitates the use of the primary color as a background and accent colour throughout the template.
@@ -33,31 +33,31 @@ A few points:
 -   The ‘hero’ section displays:
     
 
--   Journal cover image
-    
--   Volume / issue number (where available)
-    
--   Impact factor (where available)
-    
--   Article title (linked to full article)
-    
--   An article extract (extract type TBC)
-    
--   Editor /or Author name
-    
--   Button link to full article (TBC)
+	-   Journal cover image
+	    
+	-   Volume / issue number (where available)
+	    
+	-   Impact factor (where available)
+	    
+	-   Article title (linked to full article)
+	    
+	-   An article extract (extract type TBC)
+	    
+	-   Editor /or Author name
+	    
+	-   Button link to full article (TBC)
     
 
 -   The journal sections will consist of:
     
 
--   Section Title (linked to journal section)
-    
--   Article Title (linked to individual article; # of which determined by admin)
-    
--   Author(s) will list first 3 with the et al abbreviation (if possible)
-    
--   All journal sections included.
+	-   Section Title (linked to journal section)
+	    
+	-   Article Title (linked to individual article; # of which determined by admin)
+	    
+	-   Author(s) will list first 3 with the et al abbreviation (if possible)
+	    
+	-   All journal sections included.
     
 
 -   Advertising slot MPU (300px x 250px)
@@ -77,7 +77,6 @@ A few points:
     
 -   Possible additional content:
     
-
 -   Blog posts
     
 -   Recommended content widget
