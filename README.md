@@ -6,9 +6,6 @@
 	-   [Medical Humanities](https://moconnor-bmj.github.io/etocs/1/etoc-temp2-mh.html)
 	-   [Evidence Based Medicine](https://moconnor-bmj.github.io/etocs/1/etoc-temp2-ebm.html)
 	-   Vets sample & CP versions very similar - in progress.
--   Using logos as currently designed necessitates the use of the primary color as a background and accent colour throughout the template.
--   I’ve sense checked the design against those with the harsher primary colours and reverted to one colour plus gray background where necessary (compare MH to JNNP for example)
--   As the project goal is to improve engagement (through UI design & content) & issues we have with imagery/curation, I’ve introduced font pairing to lift the design. Happy to try different fonts but settled on ‘Source Serif Pro’ for now (headers & tertiary text elements).
 -   Full Banner (top) will be hidden on mobile
 -   We can include links behind 2 x logo images (to landing pages) & the email title (link to the current issue page on journals).
 -   I’ve backtracked on including the inline anchor links!! It’s a design choice as the element fills some real estate and adds an alternative navigation method. These are inline links to each section title, designed to accommodate as many sections as required.
