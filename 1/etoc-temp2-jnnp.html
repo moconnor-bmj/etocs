@@ -59,7 +59,7 @@
 			list-style-type: initial;
 			list-style-position: inside;
 			text-indent: -20px;
-			margin: 20px 0;
+			margin: 10px 0;
 		}
 
         /* What it does: Stops Outlook from adding extra spacing to tables. */
@@ -83,8 +83,14 @@
         /* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
         a {
             text-decoration: none;
-			color: #555;
+			color: #333;
         }
+
+		/* Hover colours (intro article)*/
+
+		h2 a:hover {
+			text-decoration: none !important;
+		}
 
         /* What it does: Uses a better rendering method when resizing images in IE. */
         img {
@@ -142,29 +148,6 @@
             }
         }
 
-		/* Nice underline*/
-
-		.niceUl {
-			display: inline;
-			/* text-shadow: 1px 1px #f5f6f9, -1px 1px #f5f6f9, -1px -1px #f5f6f9, 1px -1px #f5f6f9; */
-			background-image: linear-gradient(90deg, currentColor 100%, transparent 100%);
-			background-position: bottom;
-			background-repeat: no-repeat;
-			background-size: 100% 1px;
-			}
-		.niceUl::-moz-selection {
-			background-color: rgba(0, 150, 255, 0.3);
-			text-shadow: none;
-			}
-		.niceUl::selection {
-			background-color: rgba(0, 150, 255, 0.3);
-			text-shadow: none;
-			}
-
-		.niceUl a:hover {
-			background: none;
-			color: #693;
-		}
     </style>
     <!-- CSS Reset : END -->
 	<!-- Reset list spacing because Outlook ignores much of our inline CSS. -->
@@ -196,8 +179,9 @@
         }
 	    .button-td-primary:hover,
 	    .button-a-primary:hover {
-	        background: #555555 !important;
-	        border-color: #555555 !important;
+	        background: #693 !important;
+	        border-color: #693 !important;
+			color: #fff !important;
 	    }
 
         /* Media Queries */
@@ -261,6 +245,55 @@
 
 		}
 
+		/* MOC start styling here */
+		.etoc-ed {
+			font-family: 'Source Serif Pro', serif;
+			font-size: 14px;
+			color: #333;
+		}
+		.etoc-author {
+			display: block;
+			margin-left: 20px;
+			font-family: 'Source Serif Pro', serif;
+			font-size: 14px;
+			color: #333;
+			font-style: italic;
+		}
+		a.art-title {
+			border-bottom: 1px solid #dedede;
+			font-size: 14px;
+		}
+
+		a.art-title:hover {
+			border-bottom: 1px solid #333;
+			/* color: #693; */
+		}
+
+		a.etoc-anchor:hover {
+			border-bottom: 1px solid #693 !important;
+		}
+	
+	.post-author {
+			/* display: block; */
+			font-family: 'Source Serif Pro', serif;
+			font-size: 14px;
+			color: #693;
+			font-style: italic;
+			font-weight: bold;
+		}
+
+		.post-date {
+			/* display: block;
+			margin-left: 20px; */
+			font-weight: bold;
+			font-family: 'Source Serif Pro', serif;
+			font-size: 14px;
+			/* color: #fff; */
+			font-style: italic;
+		}
+
+		
+
 	</style>
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
@@ -310,7 +343,7 @@
 	        <!-- Email Header : BEGIN -->
             <tr class="noMob">
                 <td style="padding: 20px 0; text-align: center">
-                    <img src="http://placehold.it/468x60?text=Full+Banner" width="468" height="60" alt="alt_text" border="0" >
+                    <img src="http://placehold.it/468x60/ffffff/693/?text=Full+Banner+hidden+mobile" width="468" height="60" alt="alt_text" border="0" >
                 </td>
             </tr>
 	        <!-- Email Header : END -->
@@ -319,7 +352,7 @@
             <tr>
                 <td style="background-color: #693;">
 					
-					<div class="jnnplogo" style="float:left; padding-top: 12px;">
+					<div class="jnnplogo" style="float: left; padding-top: 8px; color: #fff; font-family: sans-serif; padding-left: 20px;">
 						<img src="assets/jnnp-logo.png" height="" alt="alt_text" border="0" class="g-img">
 					</div>
 					<div class="bmjlogo" style="float: right; background-color: #fff; padding-top: 12px;">
@@ -333,17 +366,27 @@
             <tr>
                 <td style="background-color: #ffffff;">
                     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-						<tr>
-							<td style="padding: 20px; font-family: sans-serif; font-size: 12px;">
-								[Volume: 89; Issue: 7]
-							</td>
-						</tr>
                         <tr>
                             <td style="padding: 20px; font-family: sans-serif; font-size: 15px; line-height: 20px;">
-								<h1 style="font-family: 'Source Serif Pro', serif; line-height: 30px; color: #333;     margin-top: -25px;">TOC alert for Journal of Neurology, Neurosurgery & Psychiatry (jnnp)</h1>
-								<p style="margin: 0 0 10px;">Welcome to the .....  </p>
+								<h1 style="font-family: 'Source Serif Pro', serif; line-height: 30px; color: #333;"><a href="#" title="Current issue of Medical Humanities">Table of Contents</a></h1>
+
+								<p style="margin-bottom: -30px; font-size: 13.5px; font-family: 'Source Serif Pro', serif; width: 70%;">
+									<a href="#sectionA" style="color: #693">Editorial commentaries</a> | 
+									<a href="#sectionB" style="color: #693">Neurodegeneration</a> | 
+									<a href="#sectionC" style="color: #693">Neurogenetics</a> | 
+									<a href="#sectionD" style="color: #693">Movement disorders</a> | 
+									<a href="#sectionE" style="color: #693">Occasional essay</a> | 
+									<a href="#sectionF" style="color: #693">Cognitive neurology</a> | 
+									<a href="#sectionG" style="color: #693">Cerebrovascular disease</a> | 
+									<a href="#sectionH" style="color: #693">Neuromuscular</a> | 
+									<a href="#sectionI" style="color: #693">Neuropsychiatry</a> | 
+									<a href="#sectionJ" style="color: #693">Proceedings</a> | 
+									<a href="#sectionK" style="color: #693">Neurological picture</a> | 
+									<a href="#sectionL" style="color: #693">Electronic pages</a> |
+								</p>
+								<!-- <p style="margin: 0 0 10px;">Welcome to the .....  </p>
 								<p style="margin: 0 0 10px;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent laoreet malesuada cursus. </p>
-								<h3 style="float: right;font-family: 'Source Serif Pro', serif; margin-top: -10px;    color: #333; ">The Editor</h3>
+								<h3 style="float: right;font-family: 'Source Serif Pro', serif; margin-top: -10px;    color: #333; ">The Editor</h3> -->
                                 <!-- <ul style="padding: 0; margin: 0; list-style-type: disc;">
 									<li style="margin:0 0 10px 20px;" class="list-item-first">A list item.</li>
 									<li style="margin:0 0 10px 20px;">Another list item here.</li>
@@ -373,7 +416,7 @@
             <!-- Background Image with Text : BEGIN -->
             <tr>
                 <!-- Bulletproof Background Images c/o https://backgrounds.cm -->
-                <td valign="middle" style="text-align: center; background-image: url('http://placehold.it/600x230/693/693'); background-color: #693; background-position: center center !important; background-size: cover !important;">
+                <td valign="middle" style="text-align: center; background-image: url('http://placehold.it/600x230/f8f8f8/f8f8f8'); background-color: #f8f8f8; background-position: center center !important; background-size: cover !important; border-top: 3px solid #693; border-bottom: 3px solid #693;">
 	                <!--[if gte mso 9]>
 	                <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;height:175px; background-position: center center !important;">
 	                <v:fill type="tile" src="http://placehold.it/600x230/222222/666666" color="#222222" />
@@ -382,9 +425,20 @@
 	                <div>
 	                    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
 	                        <tr>
-	                            <td valign="middle" style="text-align: left; padding: 40px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #ffffff;">
-									<p style="margin: 0;"><div style="color: #fff;
-										width: 100px; height: 100px; border-radius: 50%; background-color: #993366; border: 5px solid #fff;	margin-top: -100px;	margin-bottom: 10px;"><span style="font-family: 'Source Serif Pro', serif; text-align: center; display: inline-block; margin: 20px 5px 10px 5px; font-size: 19px; padding: -1px 0 0 0; letter-spacing: 1px; line-height: 1.25;">Impact Factor<br>7.144</span></div><img src="assets/jnnp-2018-August-89-8-e5-F1.gif" style="float: left; margin:0 20px 0 0; width: 200px; box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);"><p style="margin-top: 0;">JNNP's ambition is to publish the most ground-breaking and cutting-edge research from around the world. Encompassing the entire genre of neurological sciences, our focus is on the common disorders (stroke, multiple sclerosis, Parkinson's disease, epilepsy, peripheral neuropathy, subarachnoid haemorrhage and neuropsychiatry), but with a keen interest in the Gordian knots that present themselves in the field, such as ALS. With early online publication, regular podcasts and an immense archive collection (with the longest half-life of any journal in clinical neuroscience), JNNP is a trail-blazer and not a follower. Subscribers to JNNP also have access to Practical Neurology and the Journal of NeuroInterventional Surgery.</p><p>JNNP publishes regular podcasts discussing highlights from its issues. Discover them <a style="color: #fff;" href="https://soundcloud.com/bmjpodcasts/sets/jnnp">here</a>.</p><p style="text-align: center;"><a class="button-a button-a-primary" href="https://google.com/" style="background: #fff; font-family: sans-serif; font-size: 15px; line-height: 15px; text-decoration: none; padding: 13px 17px; color: #693; display: inline-block; border-radius: 4px; max-width: 150px;">Read More &rarr;</a></p>
+	                            <td valign="middle" style="text-align: left; padding: 30px; font-family: sans-serif; font-size: 15px; line-height: 20px;">
+									
+										<div style="float: right; color: #fff; width: 100px; height: 100px; border-radius: 50%; background-color: #693; border: 3px solid #fff; margin-top: -100px; margin-bottom: 10px;"><span style="font-family: 'Source Serif Pro', serif; text-align: center; display: inline-block; margin: 29px 5px 10px 15px;; font-size: 19px; padding: -1px 0 0 0; letter-spacing: 1px;
+											line-height: 1.25;">Vol: 89<br>Issue: 8</span>
+										</div>
+										<img src="assets/jnnp-2018-August-89-8-e5-F1.gif" style="float: left; margin:0 20px 0 0; width: 200px; box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);">
+										
+										<h2 style="font-family: 'Source Serif Pro', serif; color: #333;font-weight: bold; line-height: 1.25; font-size: 25px;margin: -3px 0 0 0;"><a href="#" style="color: #693; text-decoration: underline;">Physical activity as a risk factor in ALS</a></h2>
+										
+										<p style="color: #333;">Can physical activity induce excitoxicity and increase the risk of ALS?
+												Even from the time of the earliest descriptions of ALS, environmental causation was considered possible. For example, Charcot mentioned that a third of his patients considered exposure to cold and damp was responsible ... </p>
+										
+										<p style="font-family: 'Source Serif Pro', serif; font-size: 14px; color: #333;"><strong>Prof. Michael Swash</strong></p>
+										
 									
 	                            </td>
 	                        </tr>
@@ -401,47 +455,52 @@
 	        <!-- 2 Even Columns : BEGIN -->
 	        <tr>
 	            <td dir="rtl" valign="top" width="100%">
-	                <table role="presentation" border="0" cellpadding="10" cellspacing="0" width="100%" style="background-color: #f8f8f8;">
+	                <table role="presentation" border="0" cellpadding="10" cellspacing="0" width="100%" style="background-color: #fff;">
 	                    <tr>
-	                        <!-- Column : BEGIN -->
-	                        <!-- <td width="33.33%" class="stack-column-center">
-	                            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-	                                <tr>
-	                                    <td dir="ltr" valign="top" style="padding: 0 10px;">
-	                                        <img src="http://placehold.it/170" width="170" height="170" alt="alt_text" border="0" class="center-on-narrow" style="height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555;">
-	                                    </td>
-	                                </tr>
-	                            </table>
-	                        </td> -->
-	                        <!-- Column : END -->
-	                        <!-- Column : BEGIN -->
 	                        <td width="100%" class="stack-column-center">
 	                            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
 	                                <tr>
 	                                    <td dir="ltr" valign="top" style="font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; padding: 10px;" class="center-on-narrow">
-											<h2 style="font-family: 'Source Serif Pro', serif; color: #333; font-weight: bold; font-size: 30px; margin: 10px 0 0 0; text-align: center;"><i class="far fa-clock" style="font-size: 33px; top: 3px; border-bottom: none;"></i>In this issue</h2>
-												<h3 style="font-family: 'Source Serif Pro', serif; color: #693; font-size: 20px; margin-top: 30px;">Editorial commentaries</h3>
+
+												
+												<h3 id="sectionA" style="font-family: 'Source Serif Pro', serif; color: #693; font-size: 20px; margin-top: 10px;">Editorial commentaries</h3>
 												<ul>
-													<li> <h3 class="niceUl" style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: normal;"><a href="#">How useful are simple clinical features and non-invasive imaging at predicting an underlying structural cause of acute intracerebral haemorrhage?</a></h3></li>
-													<li> <h3 class="niceUl" style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: normal;"><a href="#">Deep brain stimulation: awake or asleep: it comes with a price either way</a></h3></li>
-													<li> <h3 class="niceUl" style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: normal;"><a href="#">AEDs or no AEDs during pregnancy? That is the question</a></h3></li>
+													<li> <h3 style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: normal;"><a class="art-title" href="#">Physical activity as a risk factor in ALS</a></h3>
+													<span class="etoc-author">Michael Swash</span></li>
+													
+													<li> <h3 style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: normal;"><a class="art-title" href="#">How much of the missing heritability of ALS is hidden in known ALS genes?</a><span class="etoc-author">Philip Van Damme</span></h3></li>
+													
+													<li> <h3 style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: normal;"><a class="art-title" href="#">Intensive inpatient rehabilitation for persons with Parkinson’s disease: last resort or pre-emptive strike?</a><span class="etoc-author">Danique L M Radder, Jorik Nonnekes, Bastiaan R Bloem et al.</span></h3></li>
+												</ul>
+												
+												<h3 id="sectionB" style="font-family: 'Source Serif Pro', serif; color: #693; font-size: 20px; margin-top: 30px;">Neurodegeneration</h3>
+												<ul>
+													<li> <h3 style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: normal;"><a class="art-title" href="#">Research paper: Multicentre, cross-cultural, population-based, case–control study of physical activity as risk factor for amyotrophic lateral sclerosis </a><span class="etoc-author">Anne E Visser, James P K Rooney, Fabrizio D’Ovidio et al.</span></h3></li>
+													
+													<li> <h3 style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: normal;"><a class="art-title" href="#">Research paper: Plasma tau is increased in frontotemporal dementia</a><span class="etoc-author">Martha S Foiani, Ione OC Woollacott, Carolin Heller et al</span></h3></li>
+
+													<li> <h3 style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: normal;"><a class="art-title" href="#">Review: Beyond motor neurons: expanding the clinical spectrum in Kennedy’s disease</a><span class="etoc-author">Martha S Foiani, Ione OC Woollacott, Carolin Heller et al.</span></h3></li>
+
+													<li> <h3 style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: normal;"><a class="art-title" href="#">Short Report: Oligogenic genetic variation of neurodegenerative disease genes in 980 postmortem human brains</a><span class="etoc-author">Michael J Keogh, Wei Wei, Juvid Aryaman et al.</span></h3></li>
 												</ul>
 
-												<h3 style="font-family: 'Source Serif Pro', serif; color: #693; font-size: 20px; margin-top: 30px;">Cerebrovascular disease</h3>
+												<h3 id="sectionC" style="font-family: 'Source Serif Pro', serif; color: #693; font-size: 20px; margin-top: 30px;">Neurogenetics</h3>
 												<ul>
-													<li> <h3 class="niceUl" style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: normal;"><a href="#">Predicting the presence of macrovascular causes in non-traumatic intracerebral haemorrhage: the DIAGRAM prediction score</a></h3></li>
-													<li> <h3 class="niceUl" style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: normal;"><a href="#">Correlation of non-vitamin K antagonist oral anticoagulant exposure and cerebral microbleeds in Chinese patients with atrial fibrillation</a></h3></li>
+														<li> <h3 style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: normal;"><a class="art-title" href="#">Research paper: Comprehensive analysis of the mutation spectrum in 301 German ALS families</a><span class="etoc-author">Kathrin Müller, David Brenner, Patrick Weydt, Thomas Meyer et al.</span></h3></li>
 												</ul>
-	                                        <!-- <p style="margin: 0 0 10px 0;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p> -->
-	                                        <!-- Button : BEGIN -->
-	                                        <!-- <table role="presentation" cellspacing="0" cellpadding="0" border="0" class="center-on-narrow" style="float:right;">
-	                                            <tr>
-		                                            <td class="button-td button-td-primary" style="border-radius: 4px;">
-															<a href="#" style="color: #256F9C; text-decoration: none;">Read More &rarr;</a>
-													</td>
-	                                            </tr>
-	                                        </table> -->
-	                                        <!-- Button : END -->
+
+												<div class"blogstuff" style="background-color: #f8f8f8; margin-left: -20px; margin-right: -20px; padding: 10px 20px; border-top: 3px solid #693; border-bottom: 3px solid #693;">
+												<i class="far fa-newspaper" style="float: left; padding-top: 20px; font-size: 33px; border-bottom: none; color: #693"></i><h2 style="display: inline-block; font-family: 'Source Serif Pro', serif; color: #693; font-weight: normal; font-size: 34px; margin-bottom: 0;">From the JNNP Blog</h2>
+												<ul class="blogcontent" style="margin-top: 10px; -webkit-padding-start: 0;">
+														<li style="list-style-type: none; text-indent: 0;"> <h3 style="display: block; margin-bottom: -10px; "><a class="art-title" href="#">Novel motor mapping techniques of the spinal cord: why does it matter?</a></h3><p style="font-size: 13px;">Intraoperative neurophysiological monitoring (IONM) is generally used during complex surgeries that can compromise central and peripheral nervous system structures, providing real-time information about the functional integrity of these pathways and detecting reversible neurophysiological changes. <span class="post-author">Dr Jose Manuel Matamala, JNNP web editor, July 8, 2018</span></p></li>
+														
+														<li style="list-style-type: none; text-indent: 0;"> <h3 style="display: block; margin-bottom: -10px; "><a class="art-title" href="#">Functional neurological disorders: deconstructing “the crisis for neurology”</a></h3><p style="font-size: 13px;">Functional neurological disorders are increasingly prevalent, but a limited understanding of their pathophysiology continues to make this one of the most challenging disorders seen in neurological practice. <span class="post-author">Dr Thanuja Dharmadasa; JNNP web editor, July 11, 2018</span></p></li>
+	
+														<li style="list-style-type: none; text-indent: 0;"> <h3 style="display: block; margin-bottom: -10px; "><a class="art-title" href="#">Uncovering the clinicopathological spectrum in neuropathy associated with anti-MAG antibodies</a></h3><p style="font-size: 13px;">Neuropathy associated with anti-myelin-associated glycoprotein (anti-MAG) IgM antibodies typically presents as a distal variant of chronic inflammatory demyelinating polyradiculoneuropathy (CIDP) called distal acquired demyelinating symmetric (DADS) neuropathy.  <span class="post-author">Dr Jose Manuel Matamala, JNNP web editor, May 20, 2018</span></p></li>
+	
+														<li style="list-style-type: none; text-indent: 0;"> <h3 style="display: block; margin-bottom: -10px; "><a class="art-title" href="#">A window into the pathoanatomy of ALS: visualising disease spread using DTI</a></h3><p style="font-size: 13px;">The critical involvement of central pathways in the spread of amyotrophic lateral sclerosis (ALS) is well-recognised both clinically and neuropathologically, and post-mortem studies have classified distinct pathological disease stages. <span class="post-author">Dr Thanuja Dharmadasa; JNNP web editor, May 3, 2018</span></p></li>
+													</ul>
+												</div>
 	                                    </td>
 	                                </tr>
 								</table>
@@ -458,7 +517,7 @@
 	                    <tr>
 	                        <!-- Column : BEGIN -->
 	                        <td class="stack-column-center">
-	                            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 20px !important;">
+	                            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
 	                                <tr>
 	                                    <td dir="ltr" valign="top">
 	                                        <img src="http://placehold.it/300x250/993366/ffffff/?text=MPU+Advert" width="300" height="250" alt="alt_text" border="0" class="center-on-narrow" style="padding: 4px; border: 1px solid #fff;height: auto; background: #fff; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555;">
@@ -470,121 +529,37 @@
 	                    </tr>
 	                </table>
 	            </td>
-	        </tr>
-	        <!-- Thumbnail Left, Text Right : END -->
-
-	        <!-- Thumbnail Right, Text Left : BEGIN -->
-	        <tr>
-	            <td dir="rtl" valign="top" width="100%" style="padding: 10px; background-color: #f8f8f8;">
-	                <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" >
-	                    <tr>
-	                        <!-- Column : BEGIN -->
-	                        <!-- <td width="33.33%" class="stack-column-center">
-	                            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-	                                <tr>
-	                                    <td dir="ltr" valign="top" style="padding: 0 10px;">
-	                                        <img src="http://placehold.it/170" width="170" height="170" alt="alt_text" border="0" class="center-on-narrow" style="height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555;">
-	                                    </td>
-	                                </tr>
-	                            </table>
-	                        </td> -->
-	                        <!-- Column : END -->
-	                        <!-- Column : BEGIN -->
-	                        <td width="100%" class="stack-column-center">
-	                            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-	                                <tr>
-	                                    <td dir="ltr" valign="top" style="font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; padding: 10px; text-align: left;" class="center-on-narrow">
-												<div style="color: #eee; background-color: #eee; width: 75%; margin: 0 auto; height: 5px;"><hr /></div>
-												
-												<h3 style="font-family: 'Source Serif Pro', serif; color: #693; font-size: 20px; margin-top: 20px;">
-													Movement disorders
-												</h3>
-												<ul>
-													<li> 
-														<h3 class="niceUl" style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: bold;">
-															<a href="#">Awake versus asleep deep brain stimulation for Parkinson’s disease: a critical comparison and meta-analysis</a>
-														</h3>
-														<p style="margin-top: 5px; text-indent: 0; font-size: 14px;">
-															Deep brain stimulation (DBS) for Parkinson’s disease (PD) traditionally has relied on awake surgery under local anaesthesia to facilitate intraoperative monitoring via microelectrode recording (MER) and test stimulation ...
-														</p>
-													</li>
-													<li> 
-														<h3 class="niceUl" style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: bold;">
-															<a href="#">Leg stereotypy syndrome: phenomenology and prevalence</a>
-														</h3>
-														<p style="margin-top: 5px; text-indent: 0;font-size: 14px;">
-															Leg stereotypy syndrome (LSS), first described as ‘leg stereotypy disorder’ in 2016,1 is characterised by repetitive, stereotypic movements of the legs typically present when sitting or by swaying movements of the legs and trunk while standing ...
-														</p>
-													</li>
-													<li> 
-														<h3 class="niceUl" style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: bold;">
-															<a href="#">Tracking brain damage in progressive supranuclear palsy: a longitudinal MRI study</a>
-														</h3>
-														<p style="margin-top: 5px; text-indent: 0;font-size: 14px;">
-															Progressive supranuclear palsy (PSP) is a rare neurodegenerative disease associated with 4R tauopathy.1 The most common clinical presentation of PSP is Richardson’s syndrome (PSP-RS), in which patients have insidious early onset ...
-														</p>
-													</li>
-													<li> 
-														<h3 class="niceUl" style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: bold;">
-															<a href="#">Features of GBA-associated Parkinson’s disease at presentation in the UK Tracking Parkinson’s study</a>
-														</h3>
-														<p style="margin: 5px 0 20px 0; text-indent: 0;font-size: 14px;">
-															Initial reports of an association between some types of Gaucher’s disease (GD) and parkinsonism led to the investigation of the link between heterozygous mutations in the gene coding for the enzyme glucocerebrosidase (GBA) ...
-													</li>
-												</ul>
-
-												<div style="color: #eee; background-color: #eee; width: 75%; margin: 0 auto; height: 5px;"><hr /></div>
-
-												<h3 style="font-family: 'Source Serif Pro', serif; color: #693; font-size: 20px; margin-top: 20px;">Epilepsy</h3>
-												<ul>
-													<li style="   min-height: 115px;"> <h3 class="niceUl" style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: bold;"><a href="#">Class aptent taciti sociosqu</a></h3>
-														<p style="margin-top: 5px; text-indent: 0;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. <a href="#" style="color: #256F9C; text-decoration: none; float: right; margin: 10px 30px 0 0;">Read More &rarr;</a></p></li>
-													<li style="   min-height: 115px;"> <h3 class="niceUl" style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: bold;"><a href="#">Class aptent taciti sociosqu</a></h3>
-														<p style="margin-top: 5px; text-indent: 0;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. <a href="#" style="color: #256F9C; text-decoration: none; float: right; margin: 10px 30px 0 0;">Read More &rarr;</a></p></li>
-													<li style="   min-height: 115px;"> <h3 class="niceUl" style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: bold;"><a href="#">Class aptent taciti sociosqu</a></h3>
-														<p style="margin-top: 5px; text-indent: 0;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. <a href="#" style="color: #256F9C; text-decoration: none; float: right; margin: 10px 30px 0 0;">Read More &rarr;</a></p></li>
-														<li style="   min-height: 115px;"> <h3 class="niceUl" style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: bold;"><a href="#">Class aptent taciti sociosqu</a></h3>
-															<p style="margin-top: 5px; text-indent: 0;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. <a href="#" style="color: #256F9C; text-decoration: none; float: right; margin: 10px 30px 0 0;">Read More &rarr;</a></p></li>
-												</ul>
-	                                    </td>
-	                                </tr>
-								</table>
-
-	                        </td>
-	                        <!-- Column : END -->
-	                    </tr>
-	                </table>
-	            </td>
-	        </tr>
-	        <!-- Thumbnail Right, Text Left : END -->
-
-	        <!-- Clear Spacer : BEGIN -->
+			</tr>	       
 	        <tr>
 	            <td aria-hidden="true" height="40" style="font-size: 0px; line-height: 0px;">
 	                &nbsp;
 	            </td>
 	        </tr>
 	        <tr>
-					<div>
-							<table style="background-color: #2a6ebb;" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-								<tr>
-									<td valign="middle" style="text-align: left; padding: 20px 40px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #ffffff;">
-											<i class="fas fa-user-edit" style="float: left; padding-top: 20px; font-size: 33px; border-bottom: none; color: #fff"></i><h2 style="display: inline-block; font-family: 'Source Serif Pro', serif; color: #fff; font-weight: normal; font-size: 34px; margin-bottom: 0;">Authors</h2>
-										<p style="margin: 20px 0 0 0;">
-											JNNP accepts submissions of a wide range of article types, including review articles and original research.
-												The Author Information section provides specific article requirements to help you turn your research into an article suitable for JNNP.</p>
-												<p style="margin: 20px 0 0 0;">Information is also provided on editorial policies and open access.</p>
-												
-												<p style="text-align: center;"><a class="button-a button-a-primary" href="https://google.com/" style="background: #fff; font-family: sans-serif; font-size: 15px;line-height: 15px; text-decoration: none; padding: 13px 17px; color: #2a6ebb ; display: inline-block; border-radius: 4px; max-width: 150px;">Author information</a>&nbsp;&nbsp;&nbsp;<a class="button-a button-a-primary" href="https://google.com/" style="background: #fff; font-family: sans-serif; font-size: 15px; line-height: 15px; text-decoration: none; padding: 13px 17px; color: #2a6ebb; display: inline-block; border-radius: 4px; max-width: 150px;">Submit a paper</a></p>
-										
-									</td>
-								</tr>
-							</table>
-						</div>
-			</tr>>
+
+
+						<div>
+								<table style="background-color: #693;" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+									<tr>
+										<td valign="middle" style="text-align: left; padding: 20px 40px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #ffffff;">
+												<i class="fas fa-user-edit" style="float: left; padding-top: 20px; font-size: 33px; border-bottom: none; color: #fff"></i><h2 style="display: inline-block; font-family: 'Source Serif Pro', serif; color: #fff; font-weight: normal; font-size: 34px; margin-bottom: 0;">Authors</h2>
+												<p style="margin: 20px 0 0 0;">
+													JNNP accepts submissions of a wide range of article types, including review articles and original research. The Author Information section provides specific article requirements to help you turn your research into an article suitable for JNNP.</p>
+													<p style="margin: 20px 0 0 0;">Information is also provided on editorial policies and open access.</p>
+													
+													<p style="text-align: center;"><a class="button-a button-a-primary" href="#" style="background: #fff; font-family: sans-serif; font-size: 15px;line-height: 15px; text-decoration: none; padding: 13px 17px; color: #2a6ebb ; display: inline-block; border-radius: 4px; max-width: 150px;">Author information</a>&nbsp;&nbsp;&nbsp;<a class="button-a button-a-primary" href="#" style="background: #fff; font-family: sans-serif; font-size: 15px; line-height: 15px; text-decoration: none; padding: 13px 17px; color: #2a6ebb; display: inline-block; border-radius: 4px; max-width: 150px;">Submit a paper</a></p>
+	
+													<p style="text-align: center;">[Impact Factor: 7.144 ]</p>
+											
+										</td>
+									</tr>
+								</table>
+							</div>
+
+			</tr>
 	        <tr>
 	            <td style="background-color: #ffffff;">
-						<iframe src="https://jobs.bmj.com/widget/bootstrap/job/#i=222" id="mdgxWidgetiFrame" style="width: 99%; height: 774px !important; background: 0; border: 1px solid #fff;" frameBorder="1"></iframe>
+						<iframe src="https://jobs.bmj.com/widget/bootstrap/job/#i=222" id="mdgxWidgetiFrame" style="width: 99%; height: 797px !important; background: 0; border: 1px solid #fff;" frameBorder="1"></iframe>
 	            </td>
 			</tr>
 			<tr>
@@ -592,7 +567,7 @@
 						<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
 							<tr>
 								<td style="padding: 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
-									<div style="text-align: center;"><img src="assets/social-media-icons-the-circle-set.png"></div>
+									<div style="text-align: center;"><img src="assets/socmed-horiz.png" width="500px"></div>
 									Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent laoreet malesuada cursus. Maecenas scelerisque congue eros eu posuere. Praesent in felis ut velit pretium lobortis rhoncus ut&nbsp;erat.
 								</td>
 							</tr>
@@ -635,7 +610,19 @@
 	                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
 	                        <tr>
 	                            <td style="padding: 20px; text-align: left; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #ffffff;">
-	                                <p style="margin: 0;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent laoreet malesuada cursus. Maecenas scelerisque congue eros eu posuere. Praesent in felis ut velit pretium lobortis rhoncus ut&nbsp;erat.</p>
+	                                <p style="margin: 0; font-size: 11px;">BMJ is a global healthcare knowledge provider which advances healthcare worldwide by sharing knowledge and expertise to improve experiences, outcomes and value. http://bmj.com/company 
+
+										This email and any attachments are confidential. If you have received this email in error, please do not use it in anyway. Please also kindly notify us immediately by reply and remove it from your system. 
+										
+										Any personal views expressed in this email are those of the individual and may not represent those of BMJ. 
+										
+										The recipient should check this email and any attachments for presence of viruses. BMJ accepts no liability for damage caused by any virus transmitted by this email. Emails sent or received by BMJ may be monitored, including monitoring for size, traffic, distribution and content. 
+										
+										BMJ Publishing Group Limited trading as "BMJ".
+										A private limited company, registered in England and Wales under registration number 03102371.
+										Registered office: BMA House, Tavistock Square, London WC1H 9JR, UK.
+										Copyright © 2018 by BMJ Publishing Group Ltd.
+										<a href="#">Unsubscribe</a> from or <a href="#">edit your subscription</a> to this or any email alert</p>
 	                            </td>
 	                        </tr>
 	                    </table>
