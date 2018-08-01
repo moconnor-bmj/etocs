@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
     <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
-    <title>eTOCs</title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+    <title>EBM eTOCs</title> <!-- The title tag shows in email notifications, like Android 4.4. -->
 
     <!-- Web Font / @font-face : BEGIN -->
     <!-- NOTE: If web fonts are not required, lines 10 - 27 can be safely removed. -->
@@ -148,29 +148,6 @@
             }
         }
 
-		/* Nice underline*/
-
-		.niceUl {
-			display: inline;
-			/* text-shadow: 1px 1px #f5f6f9, -1px 1px #f5f6f9, -1px -1px #f5f6f9, 1px -1px #f5f6f9; */
-			background-image: linear-gradient(90deg, currentColor 100%, transparent 100%);
-			background-position: bottom;
-			background-repeat: no-repeat;
-			background-size: 100% 1px;
-			}
-		.niceUl::-moz-selection {
-			background-color: rgba(0, 150, 255, 0.3);
-			text-shadow: none;
-			}
-		.niceUl::selection {
-			background-color: rgba(0, 150, 255, 0.3);
-			text-shadow: none;
-			}
-
-		.niceUl a:hover {
-			background: none;
-			color: #74a134 ;
-		}
     </style>
     <!-- CSS Reset : END -->
 	<!-- Reset list spacing because Outlook ignores much of our inline CSS. -->
@@ -296,6 +273,15 @@
 			border-bottom: 1px solid #74a134  !important;
 		}
 
+		.post-author {
+			display: block;
+			font-family: 'Source Serif Pro', serif;
+			font-size: 14px;
+			color: #74a134;
+			font-style: italic;
+			font-weight: bold;
+		}
+
 	</style>
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
@@ -370,16 +356,16 @@
                     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                         <tr>
                             <td style="padding: 20px; font-family: sans-serif; font-size: 15px; line-height: 20px;">
-								<h1 style="font-family: 'Source Serif Pro', serif; line-height: 30px; color: #333;"><a href="https://mh.bmj.com/content/44/2?current-issue=y" title="Current issue of Medical Humanities">TOC alert for Journal of Medical Humanities</a></h1>
+								<h1 style="font-family: 'Source Serif Pro', serif; line-height: 30px; color: #333;"><a href="https://mh.bmj.com/content/44/2?current-issue=y" title="Current issue of Medical Humanities">Table of Contents</a></h1>
 
 								<p style="margin-bottom: -30px; font-size: 13.5px; font-family: 'Source Serif Pro', serif; width: 70%;">
-                                    <a class="etoc-anchor" href="#editorial" style="color: #74a134 ">EBM opinion and debate</a> | 
-                                    <a href="#pain" style="color: #74a134 ">Research methods and reporting</a> | 
-                                    <a href="#controversies" style="color: #74a134 ">EBM analysis</a> | 
-                                    <a href="#misc" style="color: #74a134 ">Evidence synthesis</a> |
-                                    <a href="#pain" style="color: #74a134 ">Original EBM research</a> | 
-                                    <a href="#controversies" style="color: #74a134 ">Commentaries</a> | 
-                                    <a href="#misc" style="color: #74a134 ">Letters</a>
+									<a href="#sectionA" style="color: #74a134 ">Editorial</a> | 
+									<a href="#sectionB" style="color: #74a134 ">EBM opinion and debate</a> |
+									<a href="#sectionC" style="color: #74a134 ">Original EBM research</a> |  
+									<a href="#sectionD" style="color: #74a134 ">EBM analysis</a> | 
+									<a href="#sectionE" style="color: #74a134 ">Research methods and reporting</a> | 
+                                    <a href="#sectionF" style="color: #74a134 ">Evidence synthesis</a> |
+                                    <a href="#sectionG" style="color: #74a134 ">Commentaries</a> | 
                                 </p>
                             </td>
                         </tr>
@@ -405,7 +391,7 @@
             <!-- Background Image with Text : BEGIN -->
             <tr>
                 <!-- Bulletproof Background Images c/o https://backgrounds.cm -->
-                <td valign="middle" style="text-align: center; background-image: url('http://placehold.it/600x230/eeeeee/eeeeee'); background-color: #eee; background-position: center center !important; background-size: cover !important; border-top: 3px solid #74a134 ; border-bottom: 3px solid #74a134 ;">
+                <td valign="middle" style="text-align: center; background-image: url('http://placehold.it/600x230/f8f8f8/f8f8f8'); background-color: #f8f8f8; background-position: center center !important; background-size: cover !important; border-top: 3px solid #74a134 ; border-bottom: 3px solid #74a134 ;">
 	                <!--[if gte mso 9]>
 	                <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;height:175px; background-position: center center !important;">
 	                <v:fill type="tile" src="http://placehold.it/600x230/222222/666666" color="#222222" />
@@ -421,13 +407,12 @@
 										</div>
 										<img src="assets/ebmed-2018-June-23-3-81-F1.medium.gif" style="float: left; margin:0 20px 0 0; width: 200px; box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);">
 										
-										<h2 style="font-family: 'Source Serif Pro', serif; color: #333;font-weight: bold; line-height: 1.25; font-size: 25px;margin: -3px 0 0 0;"><a href="https://mh.bmj.com/content/44/2/71" style="color: #74a134 ; text-decoration: underline;">Learning framework for implementing best evidence</a></h2>
+										<h2 style="font-family: 'Source Serif Pro', serif; color: #333;font-weight: bold; line-height: 1.25; font-size: 25px;margin: -3px 0 0 0;"><a href="#" style="color: #74a134 ; text-decoration: underline;">Learning framework for implementing best evidence</a></h2>
 										
 										<p style="color: #333;">Healthcare professionals (HCP) must apply their knowledge to their practice. Consequently, the implementation of research evidence largely depends on HCPs’ knowledge, acceptance of new evidence and choices.  </p>
 										
-                                        <p style="text-align: right; font-family: 'Source Serif Pro', serif; font-size: 14px; color: #333;">By <strong>Latifa M Baynouna Al Ketbi</strong></p>
-                                        
-                                        <p style="float: right; "><a class="button-a button-a-primary" href="https://google.com/" style="background: #fff; font-family: sans-serif; font-size: 15px; line-height: 15px; text-decoration: none; padding: 13px 17px; color: #74a134 ; border-radius: 4px;">Read More →</a></p>
+                                        <p style="font-family: 'Source Serif Pro', serif; font-size: 14px; color: #333;"><strong>Latifa M Baynouna Al Ketbi</strong></p>
+
 										
 									
 	                            </td>
@@ -463,38 +448,38 @@
 	                            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
 	                                <tr>
 	                                    <td dir="ltr" valign="top" style="font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; padding: 10px;" class="center-on-narrow">
-											
-											<h2 style="font-family: 'Source Serif Pro', serif; color: #333;font-weight: bold; line-height: 1.25; font-size: 25px;     margin: 0 0 -20px 0;;"><a href="https://mh.bmj.com/content/44/2/71"><i class="far fa-clock" style="font-size: 25px; top: 3px; border-bottom: none;"></i>Also in this issue</a></h2>
-												<!-- <h3 id="editorial" style="font-family: 'Source Serif Pro', serif; color: #74a134 ; font-size: 20px; margin-top: 30px;">Editorial</h3>
-												<ul>
-													<li> <h3 style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: normal;"><a href="#">How useful are simple clinical features and non-invasive imaging at predicting an underlying structural cause of acute intracerebral haemorrhage?</a></h3></li>
-													<li> <h3 style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: normal;"><a href="#">Deep brain stimulation: awake or asleep: it comes with a price either way</a></h3></li>
-													<li> <h3 style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: normal;"><a href="#">AEDs or no AEDs during pregnancy? That is the question</a></h3></li>
-												</ul> -->
-
 												
-												<h3 id="pain" style="font-family: 'Source Serif Pro', serif; color: #74a134 ; font-size: 20px; margin-top: 30px;">Pain and paradoxes</h3>
+												<h3 id="sectionA" style="font-family: 'Source Serif Pro', serif; color: #74a134 ; font-size: 20px; margin-top: 10px;">Editorials</h3>
 												<ul>
-													<li> <h3 style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: normal;"><a class="art-title" href="https://mh.bmj.com/content/44/2/72">Pain and the human condition</a></h3>
-													<span class="etoc-author">Daniel S Goldberg</span></li>
+													<li> <h3 style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: normal;"><a class="art-title" href="#">Reflections on the history of systematic reviews</a></h3>
+													<span class="etoc-author">Mike Clarke, Iain Chalmers</span></li>
 													
-													<li> <h3 style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: normal;"><a class="art-title" href="https://mh.bmj.com/content/44/2/74">Images as catalysts for meaning-making in medical pain encounters: a multidisciplinary analysis</a><span class="etoc-author">Deborah Padfield, Helen Omand, Elena Semino et al</span></h3></li>
-													
-													<li> <h3 style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: normal;"><a class="art-title" href="https://mh.bmj.com/content/44/2/74">Shifting understandings of labour pain in Canadian medical history</a><span class="etoc-author">Whitney Wood</span></h3></li>
-													
-													<li> <h3 style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: normal;"><a class="art-title" href="https://mh.bmj.com/content/44/2/74">Pain as performance: re-virginisation in Turkey</a><span class="etoc-author">Hande Güzel</span></h3></li>
+													<li> <h3 style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: normal;"><a class="art-title" href="#">Essential medicines and the challenges in the Evidence-Based Manifesto </a><span class="etoc-author">Nav Persaud</span></h3></li>
 												</ul>
 												
-												<h3 id="controversies" style="font-family: 'Source Serif Pro', serif; color: #74a134 ; font-size: 20px; margin-top: 30px;">Current controversies</h3>
+												<h3 id="sectionB" style="font-family: 'Source Serif Pro', serif; color: #74a134 ; font-size: 20px; margin-top: 30px;">EBM opinion and debate</h3>
 												<ul>
-													<li> <h3 style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: normal;"><a class="art-title" href="https://mh.bmj.com/content/44/2/137">At the intersection of self and not-self: finding the locus of ‘self’ in autoimmunity</a><span class="etoc-author">James David Katz</span></h3></li>
-													<li> <h3 style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: normal;"><a class="art-title" href="https://mh.bmj.com/content/44/2/140">A moment for compassion: emerging rhetorics in end-of-life care</a><span class="etoc-author">Shahaduz Zaman, Alexander Whitelaw, Naomi Richards et al</span></h3></li>
+													<li> <h3 style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: normal;"><a class="art-title" href="#">Challenge of communicating uncertainty in systematic reviews when applying GRADE ratings</a><span class="etoc-author">Sten Anttila, Johannes Persson, Niklas Vareman et al.</span></h3></li>
+													<li> <h3 style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: normal;"><a class="art-title" href="#">What is a ‘complex systematic review’? Criteria, definition, and examples</a><span class="etoc-author">Kamal R Mahtani, Tom Jefferson, Carl Heneghan et al</span></h3></li>
 												</ul>
 
-												<h3 id="misc" style="font-family: 'Source Serif Pro', serif; color: #74a134 ; font-size: 20px; margin-top: 30px;">Miscellaneous</h3>
+												<h3 id="sectionC" style="font-family: 'Source Serif Pro', serif; color: #74a134 ; font-size: 20px; margin-top: 30px;">Original EBM Research</h3>
 												<ul>
-													<li> <h3 style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: normal;"><a class="art-title" href="https://mh.bmj.com/content/44/2/144">2017 Thank you to our reviewers</a></h3></li>
+													<li> <h3 style="display: inline; margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #333333; font-weight: normal;"><a class="art-title" href="#">General medicine: Barriers and facilitators to knowledge transfer and exchange in palliative care research</a><span class="etoc-author">William George Kernohan, Mary Jane Brown et al</span></h3></li>
 												</ul>
+
+												<div class"blogstuff" style="background-color: #f8f8f8; margin-left: -20px; margin-right: -20px; padding: 10px 20px; border-top: 3px solid #74a134; border-bottom: 3px solid #74a134;">
+														<i class="far fa-newspaper" style="float: left; padding-top: 20px; font-size: 33px; border-bottom: none; color: #74a134"></i><h2 style="display: inline-block; font-family: 'Source Serif Pro', serif; color: #74a134; font-weight: normal; font-size: 34px; margin-bottom: 0;">From the BMJ EBM Blog</h2>
+														<ul class="blogcontent" style="margin-top: 10px; -webkit-padding-start: 0;">
+																<li style="list-style-type: none; text-indent: 0;"> <h3 style="display: block; margin-bottom: -10px; "><a class="art-title" href="#">UK bans transvaginal mesh: here’s 5 reasons why</a></h3><p style="font-size: 13px;">This week the UK put a temporary ban on surgical mesh for stress urinary incontinence.  Julia Cumberlege, who chaired the review, said: “I have been appalled at the seriousness and scale of the tragic stories we have heard from women and their families. <span class="post-author">Carl Heneghan, July 13, 2018</span></p></li>
+																
+																<li style="list-style-type: none; text-indent: 0;"> <h3 style="display: block; margin-bottom: -10px; "><a class="art-title" href="#">NHS Health Check appears neither equitable nor cost-effective</a></h3><p style="font-size: 13px;">Since 2009 the NHS Health Check programme in England has added considerably to GP workload and has proved to be controversial given the uncertainty about whether it adds value. <span class="post-author">Carl Heneghan, July 5, 2018</span></p></li>
+			
+																<li style="list-style-type: none; text-indent: 0;"> <h3 style="display: block; margin-bottom: -10px; "><a class="art-title" href="#">A Word About Evidence: 8. Data—usage and who owns them</a></h3><p style="font-size: 13px;">In the second of two blogs, Jeff Aronson considers how the word “data” is used in bioscience publications and discusses who owns data and collections of data.  <span class="post-author">Jeffrey Aronson, July 4, 2018</span></p></li>
+			
+																<li style="list-style-type: none; text-indent: 0;"> <h3 style="display: block; margin-bottom: -10px; "><a class="art-title" href="#">A Word About Evidence: 7. Data—etymology and grammar</a></h3><p style="font-size: 13px;">The critical involvement of central pathways in the spread of amyotrophic lateral sclerosis (ALS) is well-recognised both clinically and neuropathologically, and post-mortem studies have classified distinct pathological disease stages. <span class="post-author">Jeffrey Aronson, July 1, 2018</span></p></li>
+															</ul>
+														</div>
 	                                    </td>
 	                                </tr>
 								</table>
