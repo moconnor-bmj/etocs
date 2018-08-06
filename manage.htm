@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class=" js flexbox canvas canvastext webgl touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" style="" lang="en"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>BMJ My Account&nbsp;- Sign in</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="/myaccount/css/signup-import.css" /> -->
+
+<!-- For original favicons: -->
+<link rel="shortcut icon" href="https://resources.bmj.com/repository/images/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://resources.bmj.com/repository/images/apple-touch-icon-precomposed-60.png">
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://resources.bmj.com/repository/images/apple-touch-icon-precomposed-76.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://resources.bmj.com/repository/images/apple-touch-icon-precomposed-120.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://resources.bmj.com/repository/images/apple-touch-icon-precomposed-152.png">
+
+<link rel="stylesheet" href="css/bmj-core.css">
+<link rel="stylesheet" href="css/bootstrap-responsive.css">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/font-awesome.css">
+
+<!--[if lte IE 6]>
+  <link rel="stylesheet" type="text/css" href="/myaccount/css/rebrand/bootstrap-ie6.css">
+  <link rel="stylesheet" type="text/css" href="/myaccount/css/rebrand/ie.css">
+  <link rel="stylesheet" type="text/css" href="/myaccount/css/rebrand/ie6.css">
+<![endif]-->
+
+
+<!-- the favourite icon for the site  -->
+<link rel="shortcut icon" type="image/x-icon" href="https://myaccount.bmj.com/myaccount/favicon.ico">
+<!-- Set the env variable once per session, there is no way environment (dev,stage,prod) to change in same session -->
+<!-- Set the productName variable from bmjService bean. This will be null if it's not a registration/subscription journey 
+or the product name is not set for the current bmjService -->
+<script async="" src="js/adrum-ext.js"></script><script type="text/javascript" async="" src="js/js"></script><script type="text/javascript" async="" src="js/ec.js"></script><script type="text/javascript" async="" src="js/analytics.js"></script><script async="" src="js/sensor.js"></script><script async="" src="js/gtm.js"></script><script>
+   var productName = 'undefined';
+   if(productName!=='undefined'){
+	   productName+='-'+'prod';
+   }
+   dataLayer = [{'bmjProduct': productName}];
+</script>
+<!-- Optimize Page Hiding Snippet -->
+<style>.async-hide { opacity: 0 !important} </style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date; h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')}; (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;})(window,document.documentElement,'async-hide','dataLayer',3000,{'GTM-PCCXKL4':true});
+</script>
+<!-- end Optimize Page Hiding Snippet -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PCCXKL4');</script>
+<!-- End Google Tag Manager -->
+<script>window["adrum-app-key"] = "AD-AAB-AAA-HEH";window['adrum-start-time'] = new Date().getTime();</script><script src="js/adrum.js"></script>
+<script type="text/javascript" src="js/modernizr-2.js"></script>
+<script type="text/javascript" src="js/jquery-1.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.js"></script>
+<script type="text/javascript" src="js/jquery_002.js"></script>
+<script type="text/javascript" src="js/jquery_004.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery_003.js"></script>
+<script type="text/javascript" src="js/jquery_006.js"></script>
+<script type="text/javascript" src="js/jquery_007.js"></script>
+<script type="text/javascript" src="js/jquery_005.js"></script>
+<script type="text/javascript" src="js/awesomplete.js"></script>
+<script type="text/javascript" src="js/bmj-group-cookie.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/myaccount.js"></script>
+<script type="text/javascript" src="js/pcapredict-initialise.js"></script>
+
+<!--[if lte IE 6]>
+  <script type="text/javascript" src="/myaccount/js/rebrand/bootstrap-ie.js"></script>
+<![endif]-->
+
+    
+
+    <script type="text/javascript">
+      jQuery(function() {
+        var waitText = "Please wait";
+        $("#login").submit(function(event) {
+          $('.ui-button')
+            .addClass('disabled')
+            .html(waitText + ' <img src="/myaccount/images/ajax-loader.gif">');
+          return true;
+        });
+      });
+    </script>
+  <script type="text/javascript">
+      $(function(){
+        $("#email-matrix li.email-group li.expandable:even").addClass("oddrow");
+        $("#email-matrix dl.topic-collections dl:even").addClass("oddrow");
+
+        var pageURL = window.location.toString();
+        if( pageURL.indexOf('/myaccount/access-code-redemption.html') != -1) {
+            var errorMsg = $("span.error").filter(".help-inline").text();
+
+            if ( $("input#access-code-text").val() == '' || (typeof errorMsg !== "undefined" && errorMsg != '')) {
+                $("input#access-code-text").show();
+                $("input#access-code-text").val('');
+            } else {
+                $("#accessCodeMask").show();
+            }
+        }
+      });
+    </script>
+
+    
+  </head>
+  
+  <!--[if lt IE 7 ]> <body class="ie6 en_GB"> <div id="cookie-holder" class="container"></div> <![endif]-->
+  <!--[if IE 7 ]>    <body class="ie7 en_GB"> <div id="cookie-holder" class="container"></div> <![endif]-->
+  <!--[if IE 8 ]>    <body class="ie8 en_GB"> <div id="cookie-holder" class="container"></div> <![endif]-->
+  <!--[if IE 9 ]>    <body class="ie9 en_GB"> <div id="cookie-holder" class="container"></div> <![endif]-->
+  <!--[if (gt IE 9)|!(IE)]><!--> 
+ 
+  <body class="my-account en_GB journal-alerts">
+	  
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PCCXKL4"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <div id="cookie-holder" class="container">
+
+  </div>
+  <!--<![endif]-->
+  
+    <p id="accessibility-links" class="hidden">
+  <strong>Jump to:</strong>
+  <a href="#content" title="Skip to this page's main content">Page Content</a>,
+  <a href="#main-nav-wrap" title="Skip to the site navigation">Site Navigation</a>, 
+  <a href="#main-search" title="Skip to the site-wide search form">Site Search</a> 
+</p><div class="container header">
+
+		<header>
+    <!--div id="local-body"-->
+      <div id="header">
+	<!-- MOBILE SETTINGS BUTTON -->
+	<h1 class="pull-left hidden-tablet">
+		<a class="open btn btn-primary menu-button" href="#statusbar"> <i class="icon-bar icon-white"></i> <i class="icon-bar icon-white"></i>
+			<i class="icon-bar icon-white"></i>
+		</a>
+	</h1>
+
+	<!-- MAIN LOGO -->
+	<a class="brand" href="register.htm">
+	<img src="images/my-account.gif" class="logo" alt="BMJ My Account Logo">		
+	</a>
+
+	<!-- STATUS BAR -->
+  <div class="status-message statusbar" id="statusbar">
+      <div class="hidden-desktop hidden-tablet">
+        <img src="/myaccount/images/my-account-white.png" class="menu-logo" alt="BMJ My Account Logo">
+      </div>
+  
+      <ul class="pull-right">
+        <li><a id="my-account" href="/myaccount/logout.html">Sign out</a></li>
+          <li><a id="shopping-basket-url" href="http://ics-services.bmj.com/bmj/orderbasket?returnURL=http%3A%2F%2Fmyaccount.bmj.com%2Fmyaccount%2Faccount%2Fhome-view.html%3FappDynamicsApplicationKey%3DAD-AAB-AAA-HEH%26shoppingBasketBaseUrl%3Dhttp%253A%252F%252Fics-services.bmj.com%252Fbmj%252Forderbasket%253FreturnURL%253Dhttp%25253A%25252F%25252Fmyaccount.bmj.com%25252Fmyaccount%25252Flogin.html"><i class="fa fa-shopping-basket" aria-hidden="true"></i>&nbsp;Basket</a></li>
+        <li class="dropdown"><a id="languageSelector" href="#" data-toggle="dropdown" class="dropdown-toggle">
+            English<i class="icon-drop-down-fulcrum"></i>
+        </a>
+  
+          <div id="languageList" class="dropdown-menu">
+            <ul>
+              <li><a href="/myaccount/account/home-view.html?locale=en_GB&amp;appDynamicsApplicationKey=AD-AAB-AAA-HEH&amp;shoppingBasketBaseUrl=http%3A%2F%2Fics-services.bmj.com%2Fbmj%2Forderbasket%3FreturnURL%3Dhttp%253A%252F%252Fmyaccount.bmj.com%252Fmyaccount%252Flogin.html">English</a>
+                </li>
+              <li><a href="/myaccount/account/home-view.html?locale=pt_BR&amp;appDynamicsApplicationKey=AD-AAB-AAA-HEH&amp;shoppingBasketBaseUrl=http%3A%2F%2Fics-services.bmj.com%2Fbmj%2Forderbasket%3FreturnURL%3Dhttp%253A%252F%252Fmyaccount.bmj.com%252Fmyaccount%252Flogin.html">Português (Brasil)</a>
+                </li>
+              <li><a href="/myaccount/account/home-view.html?locale=es_ES&amp;appDynamicsApplicationKey=AD-AAB-AAA-HEH&amp;shoppingBasketBaseUrl=http%3A%2F%2Fics-services.bmj.com%2Fbmj%2Forderbasket%3FreturnURL%3Dhttp%253A%252F%252Fmyaccount.bmj.com%252Fmyaccount%252Flogin.html">Español</a>
+                </li>
+              <li><a href="/myaccount/account/home-view.html?locale=zh_CN&amp;appDynamicsApplicationKey=AD-AAB-AAA-HEH&amp;shoppingBasketBaseUrl=http%3A%2F%2Fics-services.bmj.com%2Fbmj%2Forderbasket%3FreturnURL%3Dhttp%253A%252F%252Fmyaccount.bmj.com%252Fmyaccount%252Flogin.html">中文(简体)</a>
+                </li>
+              <li><a href="/myaccount/account/home-view.html?locale=ka_GE&amp;appDynamicsApplicationKey=AD-AAB-AAA-HEH&amp;shoppingBasketBaseUrl=http%3A%2F%2Fics-services.bmj.com%2Fbmj%2Forderbasket%3FreturnURL%3Dhttp%253A%252F%252Fmyaccount.bmj.com%252Fmyaccount%252Flogin.html">ქართული</a>
+                </li>
+              <li><a href="/myaccount/account/home-view.html?locale=az_AZ&amp;appDynamicsApplicationKey=AD-AAB-AAA-HEH&amp;shoppingBasketBaseUrl=http%3A%2F%2Fics-services.bmj.com%2Fbmj%2Forderbasket%3FreturnURL%3Dhttp%253A%252F%252Fmyaccount.bmj.com%252Fmyaccount%252Flogin.html">Azərbaycanca</a>
+                </li>
+              <li><a href="/myaccount/account/home-view.html?locale=uk_UA&amp;appDynamicsApplicationKey=AD-AAB-AAA-HEH&amp;shoppingBasketBaseUrl=http%3A%2F%2Fics-services.bmj.com%2Fbmj%2Forderbasket%3FreturnURL%3Dhttp%253A%252F%252Fmyaccount.bmj.com%252Fmyaccount%252Flogin.html">украї́нська мо́ва</a>
+                </li>
+              <li><a href="/myaccount/account/home-view.html?locale=vi_VN&amp;appDynamicsApplicationKey=AD-AAB-AAA-HEH&amp;shoppingBasketBaseUrl=http%3A%2F%2Fics-services.bmj.com%2Fbmj%2Forderbasket%3FreturnURL%3Dhttp%253A%252F%252Fmyaccount.bmj.com%252Fmyaccount%252Flogin.html">Tiếng Việt</a>
+                </li>
+              </ul>
+          </div></li>
+  
+        <li><a href="http://bmj.com/theBMJ">Return to site</a></li>
+        <li class="hidden-tablet hidden-phone">Signed in as: Michael O'Connor</li>
+        </ul>
+    </div>
+
+		<!-- <ul class="pull-right">
+			<li class="dropdown"><a id="languageSelector" href="#" data-toggle="dropdown" class="dropdown-toggle">
+					English<i class="icon-drop-down-fulcrum"></i>
+			</a>
+
+				<div id="languageList" class="dropdown-menu">
+					<ul>
+						<li><a href="https://myaccount.bmj.com/myaccount/login.html;jsessionid=1DCF5C56FEAB7210CBD587C3BFE2DCD6?locale=en_GB">English</a>
+							</li>
+						<li><a href="https://myaccount.bmj.com/myaccount/login.html;jsessionid=1DCF5C56FEAB7210CBD587C3BFE2DCD6?locale=pt_BR">Português (Brasil)</a>
+							</li>
+						<li><a href="https://myaccount.bmj.com/myaccount/login.html;jsessionid=1DCF5C56FEAB7210CBD587C3BFE2DCD6?locale=es_ES">Español</a>
+							</li>
+						<li><a href="https://myaccount.bmj.com/myaccount/login.html;jsessionid=1DCF5C56FEAB7210CBD587C3BFE2DCD6?locale=zh_CN">中文(简体)</a>
+							</li>
+						<li><a href="https://myaccount.bmj.com/myaccount/login.html;jsessionid=1DCF5C56FEAB7210CBD587C3BFE2DCD6?locale=ka_GE">ქართული</a>
+							</li>
+						<li><a href="https://myaccount.bmj.com/myaccount/login.html;jsessionid=1DCF5C56FEAB7210CBD587C3BFE2DCD6?locale=az_AZ">Azərbaycanca</a>
+							</li>
+						<li><a href="https://myaccount.bmj.com/myaccount/login.html;jsessionid=1DCF5C56FEAB7210CBD587C3BFE2DCD6?locale=uk_UA">украї́нська мо́ва</a>
+							</li>
+						<li><a href="https://myaccount.bmj.com/myaccount/login.html;jsessionid=1DCF5C56FEAB7210CBD587C3BFE2DCD6?locale=vi_VN">Tiếng Việt</a>
+							</li>
+						</ul>
+				</div></li>
+
+			</ul> -->
+	</div>
+
+	<div id="product-logo" class="hidden-phone product-logo ">
+		<a href=""><img style="float: right" src="images/logo-bmj-journal-registration.png" alt=""></a>
+	</div>
+</div>
+
+</header>
+
+	</div>
+
+	<div class="container">
+
+      <div id="content" class="view">
+        <div class="manage">
+              
+          <!-- Tab Bar-->
+       <!-- Tab Bar-->
+      <ul class="nav nav-tabs">
+        <li class="first">
+          <a href="#personal-information" id="personal" class="current active" data-toggle="tab">
+            <span>My details</span>
+          </a>
+        </li>
+        <li class="second active">
+          <a href="#email-matrix-container" id="email" class="firstOn" data-toggle="tab">
+            <span>My emails</span>
+          </a>
+        </li>
+        </ul>
+      <div class="tab-content">
+      <!-- Personal Data -->
+      <div class="tab-pane" id="personal-information">
+          <!-- /about-my profession -->
+              
+               <p class="message">Complete your details to receive the most relevant information about your profession and specialty interests.</p>
+               <p class="compulsory-message" style="display:none"><span class="required"><strong>*</strong></span> Indicates a required field</p>
+              <div id="personal-data-container" class="about-me view form-horizontal">
+                  <div class="about-me view">
+                      
+      
+      
+      
+      
+      
+      
+          
+        <div class="action-container">
+          <form method="post" action="/myaccount/account/personal-edit.html" id="personalData" class="edit-button">
+              
+                
+              <button class="btn btn-primary edit" id="personal-edit-link" rel="Please wait" type="submit">Edit my details</button>
+      
+          </form>	
+        </div><!-- /action-container -->
+          <div class="section-header">
+              <h2>About me</h2>
+          </div>
+        <div class="row-fluid">
+          <div class="part-one span6">
+            <div class="control-group">
+              
+      
+      
+      
+      
+      
+      
+      
+              
+                  <label class="control-label">
+                    Email
+                  </label>
+                <div class="controls">
+                moconnor@bmj.com
+                  <!--            
+                      
+                      
+                        moconnor@bmj.com
+                       
+                  -->  
+                </div>                                                             
+                    
+                      
+        
+        
+      
+            </div>
+            <div class="control-group">
+              
+      
+      
+      
+      
+      
+      
+      
+              
+                  <label class="control-label">
+                    Title
+                  </label>
+                <div class="controls">
+                Mr
+                  <!--            
+                      
+                      
+                        Mr
+                       
+                  -->  
+                </div>                                                             
+                    
+                      
+        
+        
+      
+            </div>
+            <div class="control-group">
+              
+      
+      
+      
+      
+      
+      
+      
+              
+                  <label class="control-label">
+                    First name
+                  </label>
+                <div class="controls">
+                Michael
+                  <!--            
+                      
+                      
+                        Michael
+                       
+                  -->  
+                </div>                                                             
+                    
+                      
+        
+        
+      
+            </div>
+            <div class="control-group">
+              
+      
+      
+      
+      
+      
+      
+      
+              
+                  <label class="control-label">
+                    Last name
+                  </label>
+                <div class="controls">
+                O'Connor
+                  <!--            
+                      
+                      
+                        O&#039;Connor
+                       
+                  -->  
+                </div>                                                             
+                    
+                      
+        
+        
+        
+            </div>
+            <div class="control-group">
+              
+      
+      
+      
+      
+      
+      
+      
+                    
+                
+                          
+                      
+        
+        
+      
+            </div>
+          </div>
+          <!-- /part-one -->
+          <div class="part-two span6">
+        
+            <div class="control-group">                  
+              
+      
+      
+      
+      
+      
+      
+      
+              
+                  <label class="control-label">
+                    Country/Territory
+                  </label>
+                <div class="controls">
+                Azerbaijan
+                  <!--            
+                      
+                      
+                        Azerbaijan
+                       
+                  -->  
+                </div>                                                             
+                    
+                      
+        
+        
+      
+            </div>
+            <div class="control-group">
+              
+      
+      
+      
+      
+      
+      
+      
+                    
+                
+                  
+                      <label class="control-label">
+                        Address line 1
+                      </label>
+                    <div class="controls">
+                      <span>
+                        
+                          
+                          
+                            a
+                          
+                        
+                      </span>
+                    </div>
+                          
+                      
+        
+        
+      
+            </div>
+            <div class="control-group">
+              
+      
+      
+      
+      
+      
+      
+      
+                    
+                
+                          
+                      
+        
+        
+      
+            </div>
+            <div class="control-group">
+              
+      
+      
+      
+      
+      
+      
+      
+                    
+                
+                          
+                      
+        
+        
+      
+            </div>
+            <div class="control-group">
+              
+      
+      
+      
+      
+      
+      
+      
+                    
+                
+                          
+                      
+        
+        
+      
+            </div>
+            <div class="control-group">
+              
+      
+      
+      
+      
+      
+      
+      
+                    
+                
+                  
+                      <label class="control-label">
+                        Town/City
+                      </label>
+                    <div class="controls">
+                      <span>
+                        
+                          
+                          
+                            London
+                          
+                        
+                      </span>
+                    </div>
+                          
+                      
+        
+        
+      
+            </div>
+            <div class="control-group">
+              
+      
+      
+      
+      
+      
+      
+      
+                    
+                
+                          
+                      
+        
+        
+      
+            </div>   
+            <div class="control-group">
+              
+      
+      
+      
+      
+      
+      
+      
+                    
+                
+                          
+                      
+        
+        
+      
+            </div>
+          </div>
+          <!-- /part-two -->
+        </div></div>  
+                  <div class="about-my-profession view">            
+                      
+      
+      
+      
+      
+      
+      
+        
+          <h2>About my profession</h2>
+          <p>You can select up to 3 professions</p>
+          <div class="row-fluid">
+            <div class="part-one span6">
+              
+              
+      
+      
+      
+      
+      
+      
+      
+        <div class="control-group">
+          <label class="control-label">
+            Profession
+          </label>
+        <div class="profession-list controls">
+          <ul>
+            
+            
+              <li>
+              
+                
+                
+                   Doctor/Physician
+                
+              
+                
+                  <ul>
+                    
+                    
+                      <li>Other
+                        
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+              
+                
+                
+                   Pharmacist
+                
+              
+                
+                  <ul>
+                    
+                    
+                      <li>Commercial
+                        
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+              
+                
+                
+                   Member of the Public
+                
+              
+                
+              </li>
+            
+           </ul>
+        </div>
+        </div>
+      
+      
+            </div>
+            <!-- /part-one -->
+            <div class="part-two span6">
+              <div class="view control-group">
+                
+      
+      
+      
+      
+      
+      
+      
+              
+                  <label class="control-label">
+                    Organisation or institution
+                  </label>
+                <div class="controls">
+                BMJ
+                  <!--            
+                      
+                      
+                        BMJ
+                       
+                  -->  
+                </div>                                                             
+                    
+                      
+        
+        
+      
+              </div>        
+              <div class="view control-group">
+                
+      
+      
+      
+      
+      
+      
+      
+                    
+                
+                  
+                      <label class="control-label">
+                        Primary specialty
+                      </label>
+                    <div class="controls">
+                      <span>
+                        
+                          
+                          
+                            Other
+                          
+                        
+                      </span>
+                    </div>
+                          
+                      
+        
+        
+      
+              </div>
+              <div class="view control-group">
+                
+      
+      
+      
+      
+      
+      
+      
+                    
+                
+                          
+                      
+        
+        
+      
+              </div>
+              <div class="view control-group">
+                
+      
+      
+      
+      
+      
+      
+      
+                    
+                
+                          
+                      
+        
+        
+      
+              </div>            
+                   
+            </div>
+          </div>
+              <!-- /part-two -->
+      
+          <!-- /my-profession -->
+        <div class="action-container">
+          <div class="edit-my-details">       
+            <form class="edit-button" id="personalData" action="/myaccount/account/personal-edit.html" method="post">
+              <button type="submit" id="personal-edit-link" rel="Please wait" class="btn btn-primary edit">Edit my details</button>
+            </form>
+          </div>
+        </div></div>  
+              </div>
+              
+      </div>   
+      <!-- /personal-information -->
+      <div class="tab-pane active" id="email-matrix-container">
+          <p class="email-message">Keep up-to-date with your choice of email alerts from BMJ.</p>
+          <div id="email-matrix">
+              <div class="allopenable">
+        <ul>
+          <li class="non-expandable email-group first">
+            <div class="body">
+              <p>
+                  <b>BMJ: </b>Tick to receive information and special offers about BMJ's products and services. BMJ will mainly contact you by email but occasionally by post, telephone, or SMS.
+              </p>    
+            </div>
+      
+            <div class="tick">
+              <a class="on" href="/myaccount/account/email-alert?alert=off&amp;id=news-services.parent-bmjgroup:email-alert" id="news-services.parent-bmjgroup:email-alert"> <span>on</span> </a>
+                </div>
+          </li>
+          
+      
+          <li class="non-expandable email-group">
+            <div class="body">
+              <p>
+                  <b>Five minutes of General Practice: </b>A monthly email with selected content from across BMJ.
+              </p>    
+            </div>
+      
+            <div class="tick">
+              <a class="off" href="/myaccount/account/email-alert?alert=on&amp;id=gp.parent-5min:email-alert" id="gp.parent-5min:email-alert">
+                          <span>off</span>
+                      </a>
+                  </div>
+          </li>
+          
+          
+          <li class="non-expandable email-group">
+            <div class="body">
+              <p>
+                  <b>Five minutes for Medical Students: </b>A monthly email with selected content from across BMJ.
+              </p>    
+            </div>
+      
+            <div class="tick">
+              <a class="off" href="/myaccount/account/email-alert?alert=on&amp;id=medical-students.parent-5min:email-alert" id="medical-students.parent-5min:email-alert">
+                          <span>off</span>
+                      </a>
+                  </div>
+          </li>
+          
+          
+        <li class="non-expandable email-group">
+          <p class="intersection">
+               Emails from our flagship journal The BMJ
+          </p>
+        </li>
+        
+        
+        <li class="non-expandable email-group">
+            <div class="body">        
+              <p><b>This Week in The BMJ: </b>A weekly email with links to the latest articles from <i>The BMJ</i>. (Some emails may feature advertising from third parties.)</p>
+            </div>
+      
+            <div class="tick">
+              <a class="on" href="/myaccount/account/email-alert?alert=off&amp;id=toc.parent-bmj:hw-email-alert-weekly" id="toc.parent-bmj:hw-email-alert-weekly"> <span>on</span> </a> </div>
+          </li>    
+          
+          
+          <li class="non-expandable email-group">
+            <div class="body">        
+              <p><b>The BMJ Editor’s Choice: </b>A weekly email in which Dr Fiona Godlee highlights selected content from the latest issue.</p>
+            </div>
+      
+            <div class="tick">
+              <a class="off" href="/myaccount/account/email-alert?alert=on&amp;id=ec.parent-bmj:hw-email-alert" id="ec.parent-bmj:hw-email-alert"> <span>off</span> </a>
+                </div>
+          </li>
+          
+          
+          <li class="non-expandable email-group">
+            <div class="body">        
+              <p><b>Today on bmj.com: </b>A daily email with links to the latest articles from <i>The BMJ</i>. (Some emails may feature advertising from third parties.)</p>
+            </div>
+      
+            <div class="tick">
+              <a class="off" href="/myaccount/account/email-alert?alert=on&amp;id=toc.parent-bmj:hw-email-alert-daily" id="toc.parent-bmj:hw-email-alert-daily"> <span>off</span> </a>
+                </div>
+          </li>
+          
+          <li class="non-expandable email-group" style="border-bottom: none;">
+          <p class="intersection">
+              My Journal alerts
+          </p>
+        </li>
+        
+        
+        <li class="non-expandable email-group" style="border-bottom: none;">
+            <div class="body">
+                <table class="table table-striped">
+                    <!-- <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Username</th>
+                      </tr>
+                    </thead> -->
+                    <tbody>
+                      <tr>
+                        <td>{BMJ Global Health}}</td>
+                        <td><input id="latest_arts_01" type="checkbox" />
+                          <label for="latest_arts_01">Latest articles</label></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>{Journal of Neurology, Neurosurgery &amp; Psychiatry}</td>
+                        <td></td>
+                        <td><input id="tocs_02" type="checkbox" />
+                          <label for="tocs_02">Table of Contents</label></td>
+                      </tr>
+                      <tr>
+                        <td>{Medical Ethics}</td>
+                        <td><input id="latest_arts_03" type="checkbox" />
+                          <label for="latest_arts_03">Latest articles</label></td>
+                        <td><input id="tocs_03" type="checkbox" />
+                          <label for="tocs_03">Table of Contents</label></td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+          </li>
+          
+          
+          <li class="non-expandable email-group">
+            <div class="body">
+              <p class="sub_message">
+                  View all journals to <a href="journals.htm"><b>subscribe to additional email alerts</b></a>.
+              </p>    
+            </div>
+      
+            <div class="tick">
+              <a class="off" href="/myaccount/account/email-alert?alert=on&amp;id=news.parent-bma:email-alert" id="news.parent-bma:email-alert"> <span>off</span> </a>
+                  </div>
+          </li>
+
+          <li class="non-expandable email-group">
+              <p class="intersection">
+                   Other emails from BMJ
+              </p>
+            </li>
+            
+            
+            <li class="non-expandable email-group">
+                <div class="body">
+                  <p>
+                      <b>International Forum on Quality and Safety in Healthcare: </b>Information and offers about Quality Forum and from IHI.
+                  </p>    
+                </div>
+          
+                <div class="tick">
+                  <a class="off" href="/myaccount/account/email-alert?alert=on&amp;id=international-forum.parent-quality:email-alert" id="international-forum.parent-quality:email-alert"> <span>off</span> </a>
+                      </div>
+              </li>
+              
+              
+              <li class="non-expandable email-group">
+                <div class="body">
+                  <p>
+                      <b>BMA News and Membership: </b>Membership benefits and news from BMJ's parent organisation, the BMA.
+                  </p>    
+                </div>
+          
+                <div class="tick">
+                  <a class="off" href="/myaccount/account/email-alert?alert=on&amp;id=news.parent-bma:email-alert" id="news.parent-bma:email-alert"> <span>off</span> </a>
+                      </div>
+              </li>
+          
+          
+          <li class="non-expandable email-group">
+            <p class="intersection">
+                 Links to BMJ Emails Managed on External Platforms
+            </p>
+          </li> 
+      
+          <li class="non-expandable email-group">
+            <div class="body">        
+              <p><b>BMJ Journals Alerts from Highwire: </b><a href="http://journals.bmj.com/cgi/alerts/etoc" target="_blank">Click here</a>.</p>
+            </div>
+          </li>
+      
+          <li class="non-expandable email-group">
+            <div class="body">        
+              <p><b>BMJ Careers Job Alerts: </b><a href="http://jobs.bmj.com/newalert" target="_blank">Click here</a>.</p>
+            </div>
+          </li>
+          <li class="non-expandable email-group">
+            <div class="body">        
+              <p><b>Vet Record Careers Alerts: </b><a href="http://vetrecordjobs.com/newalert" target="_blank">Click here</a>.</p>
+            </div>
+          </li>
+      
+         
+         
+        </ul>
+      </div></div>
+          <!-- /email-matrix -->
+          <div class="action-container">
+              <div class="matrix-save">
+                  <div class="save-button">
+                      <p class="legal-message">By making your selections above you are agreeing to our<a href="https://www.bmj.com/company/your-privacy/" target="_blank">
+                        Privacy Policy</a> 
+                      </p>
+                  </div>
+              </div>
+          </div><!-- /action-container -->
+           <p class="email-highlight">Update your&nbsp;<a href="#" id="my-text-link-one">contact information and interests</a> to help us keep you in touch with relevant material only.</p>
+      </div>
+      <!-- /email-matrix-container -->
+      <!-- start subscriptions -->
+      <div class="tab-pane" id="entitlements-container">
+      
+          
+      
+      </div>
+      <!-- /entitlements -->
+      
+      </div>
+      </div>
+    </div>
+  </div>
+    <footer>
+      <div class="container">
+        <div id="footer" class="global-footer">
+          <ul class="inline-list pull-right">
+            <li><a href="http://company.bmj.com/contact-us" target="_blank">Contact us</a></li>
+            <li class="divider-vertical"></li>
+            <li><a href="http://company.bmj.com/terms-and-conditions" target="_blank">Website terms &amp; conditions</a></li>
+            <li class="divider-vertical"></li>
+            <li><a href="https://www.bmj.com/company/your-privacy/" target="_blank">Privacy &amp; Cookie Policy</a></li>
+          </ul>
+    
+        <p class="copyright">©  BMJ Publishing Group Limited 2018. All rights reserved.</p>
+    
+    </div>
+
+</div>
+
+</footer>
+    
+
+<div id="pageslide" style="display: none;"></div></body></html>

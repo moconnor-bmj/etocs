@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class=" js flexbox canvas canvastext webgl touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" style="" lang="en"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>BMJ My Account&nbsp;- Sign in</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="/myaccount/css/signup-import.css" /> -->
+
+<!-- For original favicons: -->
+<link rel="shortcut icon" href="https://resources.bmj.com/repository/images/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://resources.bmj.com/repository/images/apple-touch-icon-precomposed-60.png">
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://resources.bmj.com/repository/images/apple-touch-icon-precomposed-76.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://resources.bmj.com/repository/images/apple-touch-icon-precomposed-120.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://resources.bmj.com/repository/images/apple-touch-icon-precomposed-152.png">
+
+<link rel="stylesheet" href="css/bmj-core.css">
+<link rel="stylesheet" href="css/bootstrap-responsive.css">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/font-awesome.css">
+
+<!--[if lte IE 6]>
+  <link rel="stylesheet" type="text/css" href="/myaccount/css/rebrand/bootstrap-ie6.css">
+  <link rel="stylesheet" type="text/css" href="/myaccount/css/rebrand/ie.css">
+  <link rel="stylesheet" type="text/css" href="/myaccount/css/rebrand/ie6.css">
+<![endif]-->
+
+
+<!-- the favourite icon for the site  -->
+<link rel="shortcut icon" type="image/x-icon" href="https://myaccount.bmj.com/myaccount/favicon.ico">
+<!-- Set the env variable once per session, there is no way environment (dev,stage,prod) to change in same session -->
+<!-- Set the productName variable from bmjService bean. This will be null if it's not a registration/subscription journey 
+or the product name is not set for the current bmjService -->
+<script async="" src="js/adrum-ext.js"></script><script type="text/javascript" async="" src="js/js"></script><script type="text/javascript" async="" src="js/ec.js"></script><script type="text/javascript" async="" src="js/analytics.js"></script><script async="" src="js/sensor.js"></script><script async="" src="js/gtm.js"></script><script>
+   var productName = 'undefined';
+   if(productName!=='undefined'){
+	   productName+='-'+'prod';
+   }
+   dataLayer = [{'bmjProduct': productName}];
+</script>
+<!-- Optimize Page Hiding Snippet -->
+<style>.async-hide { opacity: 0 !important} </style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date; h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')}; (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;})(window,document.documentElement,'async-hide','dataLayer',3000,{'GTM-PCCXKL4':true});
+</script>
+<!-- end Optimize Page Hiding Snippet -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PCCXKL4');</script>
+<!-- End Google Tag Manager -->
+<script>window["adrum-app-key"] = "AD-AAB-AAA-HEH";window['adrum-start-time'] = new Date().getTime();</script><script src="js/adrum.js"></script>
+<script type="text/javascript" src="js/modernizr-2.js"></script>
+<script type="text/javascript" src="js/jquery-1.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.js"></script>
+<script type="text/javascript" src="js/jquery_002.js"></script>
+<script type="text/javascript" src="js/jquery_004.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery_003.js"></script>
+<script type="text/javascript" src="js/jquery_006.js"></script>
+<script type="text/javascript" src="js/jquery_007.js"></script>
+<script type="text/javascript" src="js/jquery_005.js"></script>
+<script type="text/javascript" src="js/awesomplete.js"></script>
+<script type="text/javascript" src="js/bmj-group-cookie.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/myaccount.js"></script>
+<script type="text/javascript" src="js/pcapredict-initialise.js"></script>
+
+<!--[if lte IE 6]>
+  <script type="text/javascript" src="/myaccount/js/rebrand/bootstrap-ie.js"></script>
+<![endif]-->
+
+    
+
+    <script type="text/javascript">
+      jQuery(function() {
+        var waitText = "Please wait";
+        $("#login").submit(function(event) {
+          $('.ui-button')
+            .addClass('disabled')
+            .html(waitText + ' <img src="/myaccount/images/ajax-loader.gif">');
+          return true;
+        });
+      });
+    </script>
+  <script type="text/javascript">
+      $(function(){
+        $("#email-matrix li.email-group li.expandable:even").addClass("oddrow");
+        $("#email-matrix dl.topic-collections dl:even").addClass("oddrow");
+
+        var pageURL = window.location.toString();
+        if( pageURL.indexOf('/myaccount/access-code-redemption.html') != -1) {
+            var errorMsg = $("span.error").filter(".help-inline").text();
+
+            if ( $("input#access-code-text").val() == '' || (typeof errorMsg !== "undefined" && errorMsg != '')) {
+                $("input#access-code-text").show();
+                $("input#access-code-text").val('');
+            } else {
+                $("#accessCodeMask").show();
+            }
+        }
+      });
+    </script>
+
+    
+  </head>
+  
+  <!--[if lt IE 7 ]> <body class="ie6 en_GB"> <div id="cookie-holder" class="container"></div> <![endif]-->
+  <!--[if IE 7 ]>    <body class="ie7 en_GB"> <div id="cookie-holder" class="container"></div> <![endif]-->
+  <!--[if IE 8 ]>    <body class="ie8 en_GB"> <div id="cookie-holder" class="container"></div> <![endif]-->
+  <!--[if IE 9 ]>    <body class="ie9 en_GB"> <div id="cookie-holder" class="container"></div> <![endif]-->
+  <!--[if (gt IE 9)|!(IE)]><!--> 
+ 
+  <body class="my-account en_GB journal-alerts">
+	  
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PCCXKL4"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <div id="cookie-holder" class="container">
+
+  </div>
+  <!--<![endif]-->
+  
+    <p id="accessibility-links" class="hidden">
+  <strong>Jump to:</strong>
+  <a href="#content" title="Skip to this page's main content">Page Content</a>,
+  <a href="#main-nav-wrap" title="Skip to the site navigation">Site Navigation</a>, 
+  <a href="#main-search" title="Skip to the site-wide search form">Site Search</a> 
+</p><div class="container header">
+
+		<header>
+    <!--div id="local-body"-->
+      <div id="header">
+	<!-- MOBILE SETTINGS BUTTON -->
+	<h1 class="pull-left hidden-tablet">
+		<a class="open btn btn-primary menu-button" href="#statusbar"> <i class="icon-bar icon-white"></i> <i class="icon-bar icon-white"></i>
+			<i class="icon-bar icon-white"></i>
+		</a>
+	</h1>
+
+	<!-- MAIN LOGO -->
+	<a class="brand" href="register.htm">
+	<img src="images/my-account.gif" class="logo" alt="BMJ My Account Logo">		
+	</a>
+
+	<!-- STATUS BAR -->
+	<div class="status-message statusbar" id="statusbar">
+      <div class="hidden-desktop hidden-tablet">
+        <img src="/myaccount/images/my-account-white.png" class="menu-logo" alt="BMJ My Account Logo">
+      </div>
+  
+      <ul class="pull-right">
+        <li><a id="my-account" href="/myaccount/logout.html">Sign out</a></li>
+          <li><a id="shopping-basket-url" href="http://ics-services.bmj.com/bmj/orderbasket?returnURL=http%3A%2F%2Fmyaccount.bmj.com%2Fmyaccount%2Faccount%2Fhome-view.html%3FappDynamicsApplicationKey%3DAD-AAB-AAA-HEH%26shoppingBasketBaseUrl%3Dhttp%253A%252F%252Fics-services.bmj.com%252Fbmj%252Forderbasket%253FreturnURL%253Dhttp%25253A%25252F%25252Fmyaccount.bmj.com%25252Fmyaccount%25252Flogin.html"><i class="fa fa-shopping-basket" aria-hidden="true"></i>&nbsp;Basket</a></li>
+        <li class="dropdown"><a id="languageSelector" href="#" data-toggle="dropdown" class="dropdown-toggle">
+            English<i class="icon-drop-down-fulcrum"></i>
+        </a>
+  
+          <div id="languageList" class="dropdown-menu">
+            <ul>
+              <li><a href="/myaccount/account/home-view.html?locale=en_GB&amp;appDynamicsApplicationKey=AD-AAB-AAA-HEH&amp;shoppingBasketBaseUrl=http%3A%2F%2Fics-services.bmj.com%2Fbmj%2Forderbasket%3FreturnURL%3Dhttp%253A%252F%252Fmyaccount.bmj.com%252Fmyaccount%252Flogin.html">English</a>
+                </li>
+              <li><a href="/myaccount/account/home-view.html?locale=pt_BR&amp;appDynamicsApplicationKey=AD-AAB-AAA-HEH&amp;shoppingBasketBaseUrl=http%3A%2F%2Fics-services.bmj.com%2Fbmj%2Forderbasket%3FreturnURL%3Dhttp%253A%252F%252Fmyaccount.bmj.com%252Fmyaccount%252Flogin.html">Português (Brasil)</a>
+                </li>
+              <li><a href="/myaccount/account/home-view.html?locale=es_ES&amp;appDynamicsApplicationKey=AD-AAB-AAA-HEH&amp;shoppingBasketBaseUrl=http%3A%2F%2Fics-services.bmj.com%2Fbmj%2Forderbasket%3FreturnURL%3Dhttp%253A%252F%252Fmyaccount.bmj.com%252Fmyaccount%252Flogin.html">Español</a>
+                </li>
+              <li><a href="/myaccount/account/home-view.html?locale=zh_CN&amp;appDynamicsApplicationKey=AD-AAB-AAA-HEH&amp;shoppingBasketBaseUrl=http%3A%2F%2Fics-services.bmj.com%2Fbmj%2Forderbasket%3FreturnURL%3Dhttp%253A%252F%252Fmyaccount.bmj.com%252Fmyaccount%252Flogin.html">中文(简体)</a>
+                </li>
+              <li><a href="/myaccount/account/home-view.html?locale=ka_GE&amp;appDynamicsApplicationKey=AD-AAB-AAA-HEH&amp;shoppingBasketBaseUrl=http%3A%2F%2Fics-services.bmj.com%2Fbmj%2Forderbasket%3FreturnURL%3Dhttp%253A%252F%252Fmyaccount.bmj.com%252Fmyaccount%252Flogin.html">ქართული</a>
+                </li>
+              <li><a href="/myaccount/account/home-view.html?locale=az_AZ&amp;appDynamicsApplicationKey=AD-AAB-AAA-HEH&amp;shoppingBasketBaseUrl=http%3A%2F%2Fics-services.bmj.com%2Fbmj%2Forderbasket%3FreturnURL%3Dhttp%253A%252F%252Fmyaccount.bmj.com%252Fmyaccount%252Flogin.html">Azərbaycanca</a>
+                </li>
+              <li><a href="/myaccount/account/home-view.html?locale=uk_UA&amp;appDynamicsApplicationKey=AD-AAB-AAA-HEH&amp;shoppingBasketBaseUrl=http%3A%2F%2Fics-services.bmj.com%2Fbmj%2Forderbasket%3FreturnURL%3Dhttp%253A%252F%252Fmyaccount.bmj.com%252Fmyaccount%252Flogin.html">украї́нська мо́ва</a>
+                </li>
+              <li><a href="/myaccount/account/home-view.html?locale=vi_VN&amp;appDynamicsApplicationKey=AD-AAB-AAA-HEH&amp;shoppingBasketBaseUrl=http%3A%2F%2Fics-services.bmj.com%2Fbmj%2Forderbasket%3FreturnURL%3Dhttp%253A%252F%252Fmyaccount.bmj.com%252Fmyaccount%252Flogin.html">Tiếng Việt</a>
+                </li>
+              </ul>
+          </div></li>
+  
+        <li><a href="http://bmj.com/theBMJ">Return to site</a></li>
+        <li class="hidden-tablet hidden-phone">Signed in as: Michael O'Connor</li>
+        </ul>
+    </div>
+
+		<!-- <ul class="pull-right">
+			<li class="dropdown"><a id="languageSelector" href="#" data-toggle="dropdown" class="dropdown-toggle">
+					English<i class="icon-drop-down-fulcrum"></i>
+			</a>
+
+				<div id="languageList" class="dropdown-menu">
+					<ul>
+						<li><a href="https://myaccount.bmj.com/myaccount/login.html;jsessionid=1DCF5C56FEAB7210CBD587C3BFE2DCD6?locale=en_GB">English</a>
+							</li>
+						<li><a href="https://myaccount.bmj.com/myaccount/login.html;jsessionid=1DCF5C56FEAB7210CBD587C3BFE2DCD6?locale=pt_BR">Português (Brasil)</a>
+							</li>
+						<li><a href="https://myaccount.bmj.com/myaccount/login.html;jsessionid=1DCF5C56FEAB7210CBD587C3BFE2DCD6?locale=es_ES">Español</a>
+							</li>
+						<li><a href="https://myaccount.bmj.com/myaccount/login.html;jsessionid=1DCF5C56FEAB7210CBD587C3BFE2DCD6?locale=zh_CN">中文(简体)</a>
+							</li>
+						<li><a href="https://myaccount.bmj.com/myaccount/login.html;jsessionid=1DCF5C56FEAB7210CBD587C3BFE2DCD6?locale=ka_GE">ქართული</a>
+							</li>
+						<li><a href="https://myaccount.bmj.com/myaccount/login.html;jsessionid=1DCF5C56FEAB7210CBD587C3BFE2DCD6?locale=az_AZ">Azərbaycanca</a>
+							</li>
+						<li><a href="https://myaccount.bmj.com/myaccount/login.html;jsessionid=1DCF5C56FEAB7210CBD587C3BFE2DCD6?locale=uk_UA">украї́нська мо́ва</a>
+							</li>
+						<li><a href="https://myaccount.bmj.com/myaccount/login.html;jsessionid=1DCF5C56FEAB7210CBD587C3BFE2DCD6?locale=vi_VN">Tiếng Việt</a>
+							</li>
+						</ul>
+				</div></li>
+
+			</ul> -->
+	</div>
+
+	<div id="product-logo" class="hidden-phone product-logo ">
+		<a href=""><img style="float: right" src="images/logo-bmj-journal-registration.png" alt=""></a>
+	</div>
+</div>
+
+</header>
+
+	</div>
+
+	<div class="container">
+
+		<div id="content" class="">
+
+              
+    <form id="e-alerts" class="form-horizontal" action="/myaccount/login.html" method="post"><fieldset>
+      <img src="images/bmj-gh-logo.png" alt="BMJ Global Health logo">  
+      <h1>Register to receive email alerts</h1>
+            <p>To receive email alerts you will need to create a BMJ account. </p>
+            <p>(<span class="required">*</span>Indicates required field)</p>
+          <div class="control-group group-margin">
+          <label for="email-text" class="control-label">
+            <span class="required">*</span>Email</label>
+
+          <div class="controls">
+            <input id="email-text" name="email" class="text" maxlength="255" type="email"></div>
+        </div>
+
+        <div class="control-group">
+            <div class="controls">
+              <p class="pp">Some emails may feature advertising from third parties.</p>
+            </div>
+          </div>
+
+        <div class="control-group">
+          <label for="password-text" class="control-label">
+              <span class="required">*</span>Choose password</label>
+
+          <div class="controls">
+            <input id="password-text" name="password" class="text" value="" maxlength="255" type="password" required></div>
+        </div>
+
+        <div class="control-group">
+          <label for="password-repeat" class="control-label">
+              <span class="required">*</span>Repeat password</label>
+
+          <div class="controls">
+            <input id="password-text" name="password-repeat" class="text" value="" maxlength="255" type="password" required></div>
+        </div>
+
+        <div class="control-group">
+          <div class="controls">
+            <p class="pp">We will always process the information your provide here in accordance with the terms of our <a href="#">privacy policy</a>.</p>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <div class="controls">
+              <input id="tandc" type="checkbox" />
+              <label for="tandc"><span class="required">*</span>I agree to BMJ's terms and conditions and to receive content alerts from this journal. Some emails may feature advertising from third parties, including pharma companies.</label>
+              <input id="marketing" type="checkbox" />
+              <label for="marketing">I want to receive information and special offers about BMJ's products and services.</label>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <div class="controls">
+            <a href="confirm.htm" class="btn btn-primary" type="submit" style="width: 270px"> <!-- Switch back to button & remove style when implmenting-->
+              Register &amp; Get Alerts</a>
+          </div>
+        </div>
+       
+      </fieldset>
+    </form></div>
+    </div>
+    <footer>
+			<div class="container">
+
+    <div id="footer" class="global-footer">
+    
+        <ul class="inline-list pull-right">
+          <li><a href="http://company.bmj.com/contact-us" target="_blank">Contact us</a></li>
+          <li class="divider-vertical"></li>
+          <li><a href="http://company.bmj.com/terms-and-conditions" target="_blank">Website terms &amp; conditions</a></li>
+              <li class="divider-vertical"></li>
+              <li><a href="https://www.bmj.com/company/your-privacy/" target="_blank">Privacy &amp; Cookie Policy</a></li>
+            </ul>
+    
+        <p class="copyright">©  BMJ Publishing Group Limited 2018. All rights reserved.</p>
+    
+    </div>
+
+</div>
+
+</footer>
+    
+
+<div id="pageslide" style="display: none;"></div></body></html>
