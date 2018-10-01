@@ -1,0 +1,719 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+    <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+    <title>TOC alert for  (jnnp)</title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+
+    <!-- Web Font / @font-face : BEGIN -->
+    <!-- NOTE: If web fonts are not required, lines 10 - 27 can be safely removed. -->
+
+    <!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
+    <!--[if mso]>
+        <style>
+            * {
+                font-family: sans-serif !important;
+            }
+        </style>
+	<![endif]-->
+
+	<!--- Bulletproof UL lists -->
+	<!--[if gte mso 9]>
+		<style>
+		li {
+			text-indent: -1em; /* Normalise space between bullets and text */
+		}
+		</style>
+	<![endif]-->
+
+    <!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ -->
+    <!--[if !mso]><!-->
+		<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet">
+    <!--<![endif]-->
+
+    <!-- Web Font / @font-face : END -->
+
+    <!-- CSS Reset : BEGIN -->
+    <style>
+
+        /* What it does: Remove spaces around the email design added by some email clients. */
+        /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+        html,
+        body {
+            margin: 0 auto !important;
+            padding: 0 !important;
+            height: 100% !important;
+            width: 100% !important;
+        }
+
+        /* What it does: Stops email clients resizing small text. */
+        * {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        /* What it does: Centers email on Android 4.4 */
+        div[style*="margin: 16px 0"] {
+            margin: 0 !important;
+        }
+
+		ul {
+			-webkit-padding-start: 20px;
+			margin-top: -10px;
+		}
+
+		li {
+			list-style-type: initial;
+			list-style-position: inside;
+			text-indent: -20px;
+			margin: 10px 0;
+		}
+
+        /* What it does: Stops Outlook from adding extra spacing to tables. */
+        table,
+        td {
+            mso-table-lspace: 0pt !important;
+            mso-table-rspace: 0pt !important;
+        }
+
+        /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+        table {
+            border-spacing: 0 !important;
+            border-collapse: collapse !important;
+            table-layout: fixed !important;
+			margin: 0 auto !important;
+			outline: 2px solid red;
+        }
+        table table table {
+            table-layout: auto;
+        }
+
+        /* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
+        a {
+            text-decoration: none;
+			color: #333 !important;
+        }
+
+		/* Hover colours (intro article)*/
+
+		h2 a:hover {
+			text-decoration: none !important;
+		}
+
+        /* What it does: Uses a better rendering method when resizing images in IE. */
+        img {
+            -ms-interpolation-mode:bicubic;
+        }
+
+        /* What it does: A work-around for email clients meddling in triggered links. */
+        *[x-apple-data-detectors],  /* iOS */
+        .unstyle-auto-detected-links *,
+        .aBn {
+            border-bottom: 0 !important;
+            cursor: default !important;
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        /* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
+        .a6S {
+           display: none !important;
+           opacity: 0.01 !important;
+       }
+       /* If the above doesn't work, add a .g-img class to any image in question. */
+       img.g-img + div {
+           display: none !important;
+       }
+
+	   .fa, .far, .fas {
+			margin-right: 10px;
+			color: #333;
+		}
+
+        /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+        /* Create one of these media queries for each additional viewport size you'd like to fix */
+
+        /* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+        @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+            .email-container {
+                min-width: 320px !important;
+            }
+        }
+        /* iPhone 6, 6S, 7, 8, and X */
+        @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+            .email-container {
+                min-width: 375px !important;
+            }
+        }
+        /* iPhone 6+, 7+, and 8+ */
+        @media only screen and (min-device-width: 414px) {
+            .email-container {
+                min-width: 414px !important;
+            }
+        }
+    </style>
+	<!-- CSS Reset : END -->
+	
+	<!-- Reset list spacing because Outlook ignores much of our inline CSS. -->
+	<!--[if mso]>
+	<style type="text/css">
+		ul,
+		ol {
+			margin: 0 !important;
+		}
+		li {
+			margin-left: 30px !important;
+		}
+		li.list-item-first {
+			margin-top: 0 !important;
+		}
+		li.list-item-last {
+			margin-bottom: 10px !important;
+		}
+	</style>
+	<![endif]-->
+
+    <!-- Progressive Enhancements : BEGIN -->
+    <style>
+
+        /* What it does: Hover styles for buttons */
+        .button-td,
+        .button-a {
+            transition: all 100ms ease-in;
+        }
+	    .button-td-primary:hover,
+	    .button-a-primary:hover {
+	        background: #78B43C  !important;
+	        color: #fff  !important;
+
+	    }
+
+        /* Media Queries */
+        @media screen and (max-width: 600px) {
+
+            .email-container {
+                width: 100% !important;
+                margin: auto !important;
+            }
+
+            /* What it does: Forces elements to resize to the full width of their container. Useful for resizing images beyond their max-width. */
+            .fluid {
+                max-width: 100% !important;
+                height: auto !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+
+            /* What it does: Forces table cells into full-width rows. */
+            .stack-column,
+            .stack-column-center {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                direction: ltr !important;
+            }
+            /* And center justify these ones. */
+            .stack-column-center {
+                text-align: center !important;
+            }
+
+            /* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+            .center-on-narrow {
+                text-align: center !important;
+                display: block !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                float: none !important;
+            }
+            table.center-on-narrow {
+                display: inline-block !important;
+            }
+
+            /* What it does: Adjust typography on small screens to improve readability */
+            .email-container p {
+                font-size: 17px !important;
+            }
+        }
+	</style>
+
+	<!-- Email alerts customiastion here -->
+	<style>
+		a.art-title:hover {
+			border-bottom: 1px solid #333;
+		}
+
+		a.etoc-anchor:hover {
+			border-bottom: 1px solid #669933  !important;
+		}
+		/* Odds and ends */
+		.column {
+			width: 300px;
+			float:left;
+		}
+		.column tr td { padding: 15px; }
+		.column-wrap {
+			padding:0!important;
+			margin:0 auto;
+			max-width:600px!important;
+		}
+		.column table { 
+			width:100%;
+		}
+	</style>
+
+	<!-- GMail only targetting :: Now anything with class gmail will be hidden-->
+	<style>
+        u + .body .gmail{
+            display:none !important;
+        }
+	</style>
+	
+	<!-- Media Queries -->
+	<style>
+		@media only screen and (max-width: 500px) {
+			.noMob {
+				display: none;
+			}
+			.bmjlogo img {
+				width: 190px;
+				padding-top: 17px;
+			}
+		}
+	</style>
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
+
+    <!-- Progressive Enhancements : END -->
+
+    <!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
+
+	<!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+
+</head>
+<!--
+	The email background color (#222222) is defined in three places:
+	1. body tag: for most email clients
+	2. center tag: for Gmail and Inbox mobile apps and web versions of Gmail, GSuite, Inbox, Yahoo, AOL, Libero, Comcast, freenet, Mail.ru, Orange.fr
+	3. mso conditional: For Windows 10 Mail
+-->
+<body class="body" width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #222222;">
+	<center style="width: 100%; ">
+    <!--[if mso | IE]>
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #222222;">
+    <tr>
+    <td>
+    <![endif]-->
+
+        <!-- Visually Hidden Preheader Text : BEGIN -->
+        <div style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
+            Browse our latest issue, featured content and editorials.
+        </div>
+        <!-- Visually Hidden Preheader Text : END -->
+
+        <!-- Create white space after the desired preview text so email clients don’t pull other distracting text into the inbox preview. Extend as necessary. -->
+        <!-- Preview Text Spacing Hack : BEGIN -->
+        <div style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
+	        &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+        </div>
+        <!-- Preview Text Spacing Hack : END -->
+
+        <!-- Email Body : BEGIN -->
+        <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="margin: 0 auto;" class="email-container">
+	        <!-- Email Header : BEGIN -->
+            <tr class="noMob">
+                <td style="padding: 20px 0; text-align: center">
+					<a href="https://oas.services.bmj.com/RealMedia/ads/click_nx.ads/jnnp/189713468@Top?_RM_NX_ID_=myemail@email.com_189713468" target="_blank">
+						<img src="https://oas.services.bmj.com/RealMedia/ads/adstream_nx.ads/jnnp/189713468@Top?_RM_NX_ID_=myemail@email.com_189713468" border=0> </a>
+                </td>
+            </tr>
+	        <!-- Email Header : END -->
+
+            <!-- Hero Image, Flush : BEGIN -->
+            <tr>
+                <td style="background-color: #669933 ;">
+
+					<div style="float: left; padding: 20px 0 0 20px">
+						<img src="https://resources.bmj.com/repository/journals-network-project/images/journal-logos/alerts/logo-jnnp.png" alt="Journal of Neurology, Neurosurgery & Psychiatry logo">
+					</div>
+					<div class="bmjlogo" style="float: right; background-color: #fff; padding-top: 12px;">
+						<img src="https://resources.bmj.com/repository/journals-network-project/etoc-assets/bmjj-logo.png" width="227px" height="" alt=" " border="0" class="g-img">
+					</div>
+                </td>
+            </tr>
+            <!-- Hero Image, Flush : END -->
+
+            <!-- 1 Column Text + Button : BEGIN -->
+            <tr>
+                <td style="background-color: #ffffff;">
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                            <td style="padding: 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; width: 80%">
+                                <h1 style="font-family: 'Roboto Slab', serif; line-height: 30px; color: #333;">Table of Contents</h1>
+
+                                 <div style="width: 80%; line-height: 1.5;">
+									
+									<a style="margin-bottom: -30px; font-size: 16px; font-family: 'Roboto Slab', serif;" class="etoc-anchor" href="#section-1" style="color: #669933  ">Editorial commentaries</a> |
+									
+									<a style="margin-bottom: -30px; font-size: 16px; font-family: 'Roboto Slab', serif;" class="etoc-anchor" href="#section-2" style="color: #669933  ">Impact Commentaries</a> |
+									
+									<a style="margin-bottom: -30px; font-size: 16px; font-family: 'Roboto Slab', serif;" class="etoc-anchor" href="#section-3" style="color: #669933  ">Cerebrovascular disease</a> |
+									
+									<a style="margin-bottom: -30px; font-size: 16px; font-family: 'Roboto Slab', serif;" class="etoc-anchor" href="#section-4" style="color: #669933  ">Neuro-inflammation</a> |
+									
+									<a style="margin-bottom: -30px; font-size: 16px; font-family: 'Roboto Slab', serif;" class="etoc-anchor" href="#section-5" style="color: #669933  ">Neuromuscular</a> |
+									
+									<a style="margin-bottom: -30px; font-size: 16px; font-family: 'Roboto Slab', serif;" class="etoc-anchor" href="#section-6" style="color: #669933  ">Neurodegeneration</a> |
+									
+									<a style="margin-bottom: -30px; font-size: 16px; font-family: 'Roboto Slab', serif;" class="etoc-anchor" href="#section-7" style="color: #669933  ">Multiple sclerosis</a> |
+									
+									<a style="margin-bottom: -30px; font-size: 16px; font-family: 'Roboto Slab', serif;" class="etoc-anchor" href="#section-8" style="color: #669933  ">Epilepsy</a> |
+									
+									<a style="margin-bottom: -30px; font-size: 16px; font-family: 'Roboto Slab', serif;" class="etoc-anchor" href="#section-9" style="color: #669933  ">Movement disorders</a> |
+									
+									<a style="margin-bottom: -30px; font-size: 16px; font-family: 'Roboto Slab', serif;" class="etoc-anchor" href="#section-10" style="color: #669933  ">Cognitive neurology</a> |
+									
+									<a style="margin-bottom: -30px; font-size: 16px; font-family: 'Roboto Slab', serif;" class="etoc-anchor" href="#section-11" style="color: #669933  ">PostScript</a> |
+																	</div>
+
+
+							</td>
+						</tr>
+
+
+                    </table>
+                </td>
+            </tr>
+            <!-- 1 Column Text + Button : END -->
+
+            <!-- Background Image with Text : BEGIN -->
+            <tr>
+                <!-- Bulletproof Background Images c/o https://backgrounds.cm -->
+                <td valign="middle" style="text-align: center; background-image: url('http://placehold.it/600x230/eeeeee/eeeeee'); background-color: #eee; background-position: center center !important; background-size: cover !important; border-top: 3px solid #669933  ; border-bottom: 3px solid #669933  ;">
+	                <!--[if gte mso 9]>
+	                <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;height:175px; background-position: center center !important;">
+	                <v:fill type="tile" src="http://placehold.it/600x230/222222/666666" color="#222222" />
+	                <v:textbox inset="0,0,0,0">
+	                <![endif]-->
+	                <div>
+	                    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+	                        <tr>
+	                            <td valign="middle" style="text-align: left; padding: 30px; font-family: sans-serif; font-size: 15px; line-height: 20px;">
+
+										<div class="gmail" style="float: right; color: #fff; width: 100px; height: 100px; border-radius: 50%; background-color: #669933; border: 3px solid #fff;  margin-top: -90px;">
+											<span style="font-family: 'Roboto Slab', serif; text-align: center; display: inline-block; margin: 29px 5px 10px 15px;; font-size: 19px;  letter-spacing: 1px; line-height: 1.25; ">Vol: 89<br>Issue: 9</span>
+										</div>
+										<img src="https://jnnp.bmj.com/content/jnnp/89/9/F1.medium.gif" style="float: left; margin:0 20px 20px 0; width: 200px; box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);">
+
+										<h2 style="font-family: 'Roboto Slab', serif; color: #333;font-weight: bold; line-height: 1.25; font-size: 25px;"><a href="https://jnnp.bmj.com/content/89/9/962?utm_source=alert&utm_medium=email&utm_campaign=jnnp&utm_content=toc&utm_term=11092018" style="color: #333 ; text-decoration: underline;">Convergent molecular defects underpin diverse neurodegenerative diseases</a></h2>
+
+										<p style="color: #333;">In our ageing population, neurodegenerative disorders carry an enormous personal, societal and economic burden. Although neurodegenerative diseases are often thought of as clinicopathological entities, increasing evidence suggests a considerable overlap in the molecular underpinnings of their pathogenesis. Such overlapping biological processes include the handling of misfolded proteins, defective organelle trafficking,</p>
+
+
+										<p style="font-family: 'Roboto Slab', serif; font-size: 14px; color: #333;text-align: right; padding: 0; margin: 0;">By <strong>Editor / Author</strong></p>
+
+										<!-- <p style="float: right; "><a class="button-a button-a-primary" href="#" style="background: #fff; font-family: sans-serif; font-size: 15px; line-height: 15px; text-decoration: none; padding: 13px 17px; color: #669933  ; border-radius: 4px;">Link to article →</a></p> -->
+
+
+	                            </td>
+	                        </tr>
+	                    </table>
+	                </div>
+	                <!--[if gte mso 9]>
+	                </v:textbox>
+	                </v:rect>
+	                <![endif]-->
+	            </td>
+	        </tr>
+	        <!-- Background Image with Text : END -->
+
+	        <!-- 2 Even Columns : BEGIN -->
+	        <tr>
+	            <td dir="rtl" valign="top" width="100%">
+	                <table role="presentation" border="0" cellpadding="10" cellspacing="0" width="100%" style="background-color: #fff;">
+	                    <tr>
+	                        <!-- Column : BEGIN -->
+	                        <!-- <td width="33.33%" class="stack-column-center">
+	                            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+	                                <tr>
+	                                    <td dir="ltr" valign="top" style="padding: 0 10px;">
+	                                        <img src="http://placehold.it/170" width="170" height="170" alt="alt_text" border="0" class="center-on-narrow" style="height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555;">
+	                                    </td>
+	                                </tr>
+	                            </table>
+	                        </td> -->
+	                        <!-- Column : END -->
+	                        <!-- Column : BEGIN -->
+	                        <td width="100%" class="stack-column-center">
+	                            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+	                                <tr>
+	                                    <td dir="ltr" valign="top" style="font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; padding: 10px;" class="center-on-narrow">
+
+																								<h3 id="section-1" style="font-family: 'Roboto Slab', serif; color: #669933  ; font-size: 20px; margin-top: 10px;">Editorial commentaries</h3>
+												<ul style="padding: 0; Margin: 0 0 0 40px;"> <!-- left and right margins only. Uppercase M hack for for Outlook -->
+																										<li style="Margin: 10px 0 10px 0;"><a class="art-title" style="border-bottom: 1px solid #dedede; font-size: 14px; font-weight: bold;" href="https://jnnp.bmj.com/content/89/9/899?utm_source=alert&utm_medium=email&utm_campaign=jnnp&utm_content=toc&utm_term=11092018">Collateral status as the fifth dimension: warping the time clock for endovascular treatment in acute ischaemic stroke</a><br />
+														<span style="font-family: 'Roboto Slab', serif; font-size: 13px; color: #707070; font-style: italic;">
+                                                                                                                Xinyi Leng, David S Liebeskind
+                                                                                                            </span></li>
+																										<li style="Margin: 10px 0 10px 0;"><a class="art-title" style="border-bottom: 1px solid #dedede; font-size: 14px; font-weight: bold;" href="https://jnnp.bmj.com/content/89/9/900?utm_source=alert&utm_medium=email&utm_campaign=jnnp&utm_content=toc&utm_term=11092018">MOG antibody disorders and AQP4 antibody NMO spectrum disorders share a common immunopathogenesis</a><br />
+														<span style="font-family: 'Roboto Slab', serif; font-size: 13px; color: #707070; font-style: italic;">
+                                                                                                                Akiyuki Uzawa, Masahiro Mori, Satoshi Kuwabara
+                                                                                                            </span></li>
+																									</ul>
+
+																								<h3 id="section-2" style="font-family: 'Roboto Slab', serif; color: #669933  ; font-size: 20px; margin-top: 10px;">Impact Commentaries</h3>
+												<ul style="padding: 0; Margin: 0 0 0 40px;"> <!-- left and right margins only. Uppercase M hack for for Outlook -->
+																										<li style="Margin: 10px 0 10px 0;"><a class="art-title" style="border-bottom: 1px solid #dedede; font-size: 14px; font-weight: bold;" href="https://jnnp.bmj.com/content/89/9/901?utm_source=alert&utm_medium=email&utm_campaign=jnnp&utm_content=toc&utm_term=11092018">Central nervous system in motor neuron disease</a><br />
+														<span style="font-family: 'Roboto Slab', serif; font-size: 13px; color: #707070; font-style: italic;">
+                                                                                                                Andrew Eisen
+                                                                                                            </span></li>
+																									</ul>
+
+																								<h3 id="section-3" style="font-family: 'Roboto Slab', serif; color: #669933  ; font-size: 20px; margin-top: 10px;">Cerebrovascular disease</h3>
+												<ul style="padding: 0; Margin: 0 0 0 40px;"> <!-- left and right margins only. Uppercase M hack for for Outlook -->
+																										<li style="Margin: 10px 0 10px 0;"><a class="art-title" style="border-bottom: 1px solid #dedede; font-size: 14px; font-weight: bold;" href="https://jnnp.bmj.com/content/89/9/903?utm_source=alert&utm_medium=email&utm_campaign=jnnp&utm_content=toc&utm_term=11092018">Collateral status affects the onset-to-reperfusion time window for good outcome</a><br />
+														<span style="font-family: 'Roboto Slab', serif; font-size: 13px; color: #707070; font-style: italic;">
+                                                                                                                Byung Moon Kim, Jang-Hyun Baek, Ji Hoe Heo et al.
+														                                                    </span></li>
+																										<li style="Margin: 10px 0 10px 0;"><a class="art-title" style="border-bottom: 1px solid #dedede; font-size: 14px; font-weight: bold;" href="https://jnnp.bmj.com/content/89/9/910?utm_source=alert&utm_medium=email&utm_campaign=jnnp&utm_content=toc&utm_term=11092018">Systematic review and meta-analysis on outcome differences among patients with TICI2b versus TICI3 reperfusions: success revisited</a><br />
+														<span style="font-family: 'Roboto Slab', serif; font-size: 13px; color: #707070; font-style: italic;">
+                                                                                                                Johannes Kaesmacher, Tomas Dobrocky, Mirjam R Heldner et al.
+														                                                    </span></li>
+																										<li style="Margin: 10px 0 10px 0;"><a class="art-title" style="border-bottom: 1px solid #dedede; font-size: 14px; font-weight: bold;" href="https://jnnp.bmj.com/content/89/9/918?utm_source=alert&utm_medium=email&utm_campaign=jnnp&utm_content=toc&utm_term=11092018">Mapping the contribution and strategic distribution patterns of neuroimaging features of small vessel disease in poststroke cognitive impairment</a><br />
+														<span style="font-family: 'Roboto Slab', serif; font-size: 13px; color: #707070; font-style: italic;">
+                                                                                                                Lin Shi, Lei Zhao, Fu Ki Yeung et al.
+														                                                    </span></li>
+																									</ul>
+
+																								<h3 id="section-4" style="font-family: 'Roboto Slab', serif; color: #669933  ; font-size: 20px; margin-top: 10px;">Neuro-inflammation</h3>
+												<ul style="padding: 0; Margin: 0 0 0 40px;"> <!-- left and right margins only. Uppercase M hack for for Outlook -->
+																										<li style="Margin: 10px 0 10px 0;"><a class="art-title" style="border-bottom: 1px solid #dedede; font-size: 14px; font-weight: bold;" href="https://jnnp.bmj.com/content/89/9/927?utm_source=alert&utm_medium=email&utm_campaign=jnnp&utm_content=toc&utm_term=11092018">CSF cytokine profile in MOG-IgG+ neurological disease is similar to AQP4-IgG+ NMOSD but distinct from MS: a cross-sectional study and potential therapeutic implications</a><br />
+														<span style="font-family: 'Roboto Slab', serif; font-size: 13px; color: #707070; font-style: italic;">
+                                                                                                                Kimihiko Kaneko, Douglas Kazutoshi Sato, Ichiro Nakashima et al.
+														                                                    </span></li>
+																									</ul>
+
+																								<h3 id="section-5" style="font-family: 'Roboto Slab', serif; color: #669933  ; font-size: 20px; margin-top: 10px;">Neuromuscular</h3>
+												<ul style="padding: 0; Margin: 0 0 0 40px;"> <!-- left and right margins only. Uppercase M hack for for Outlook -->
+																										<li style="Margin: 10px 0 10px 0;"><a class="art-title" style="border-bottom: 1px solid #dedede; font-size: 14px; font-weight: bold;" href="https://jnnp.bmj.com/content/89/9/937?utm_source=alert&utm_medium=email&utm_campaign=jnnp&utm_content=toc&utm_term=11092018">Nusinersen for SMA: expanded access programme</a><br />
+														<span style="font-family: 'Roboto Slab', serif; font-size: 13px; color: #707070; font-style: italic;">
+                                                                                                                Michelle A Farrar, Hooi Ling Teoh, Kate A Carey et al.
+														                                                    </span></li>
+																										<li style="Margin: 10px 0 10px 0;"><a class="art-title" style="border-bottom: 1px solid #dedede; font-size: 14px; font-weight: bold;" href="https://jnnp.bmj.com/content/89/9/943?utm_source=alert&utm_medium=email&utm_campaign=jnnp&utm_content=toc&utm_term=11092018">Split hand muscle echo intensity index as a reliable imaging marker for differential diagnosis of amyotrophic lateral sclerosis</a><br />
+														<span style="font-family: 'Roboto Slab', serif; font-size: 13px; color: #707070; font-style: italic;">
+                                                                                                                Hung Youl Seok, Jinseok Park, Yoo Hwan Kim et al.
+														                                                    </span></li>
+																										<li style="Margin: 10px 0 10px 0;"><a class="art-title" style="border-bottom: 1px solid #dedede; font-size: 14px; font-weight: bold;" href="https://jnnp.bmj.com/content/89/9/949?utm_source=alert&utm_medium=email&utm_campaign=jnnp&utm_content=toc&utm_term=11092018">Clinical outcome of Guillain-Barré syndrome after prolonged mechanical ventilation</a><br />
+														<span style="font-family: 'Roboto Slab', serif; font-size: 13px; color: #707070; font-style: italic;">
+                                                                                                                Bianca van den Berg, Eline F Storm, Marcel J P Garssen et al.
+														                                                    </span></li>
+																									</ul>
+
+																								<h3 id="section-6" style="font-family: 'Roboto Slab', serif; color: #669933  ; font-size: 20px; margin-top: 10px;">Neurodegeneration</h3>
+												<ul style="padding: 0; Margin: 0 0 0 40px;"> <!-- left and right margins only. Uppercase M hack for for Outlook -->
+																										<li style="Margin: 10px 0 10px 0;"><a class="art-title" style="border-bottom: 1px solid #dedede; font-size: 14px; font-weight: bold;" href="https://jnnp.bmj.com/content/89/9/955?utm_source=alert&utm_medium=email&utm_campaign=jnnp&utm_content=toc&utm_term=11092018">Neurofilament light chain and tau concentrations are markedly increased in the serum of patients with sporadic Creutzfeldt-Jakob disease, and tau correlates with rate of disease progression</a><br />
+														<span style="font-family: 'Roboto Slab', serif; font-size: 13px; color: #707070; font-style: italic;">
+                                                                                                                Andrew Geoffrey Bourne Thompson, Connie Luk, Amanda J Heslegrave et al.
+														                                                    </span></li>
+																										<li style="Margin: 10px 0 10px 0;"><a class="art-title" style="border-bottom: 1px solid #dedede; font-size: 14px; font-weight: bold;" href="https://jnnp.bmj.com/content/89/9/962?utm_source=alert&utm_medium=email&utm_campaign=jnnp&utm_content=toc&utm_term=11092018">Convergent molecular defects underpin diverse neurodegenerative diseases</a><br />
+														<span style="font-family: 'Roboto Slab', serif; font-size: 13px; color: #707070; font-style: italic;">
+                                                                                                                George K Tofaris, Noel J Buckley
+                                                                                                            </span></li>
+																									</ul>
+
+																								<h3 id="section-7" style="font-family: 'Roboto Slab', serif; color: #669933  ; font-size: 20px; margin-top: 10px;">Multiple sclerosis</h3>
+												<ul style="padding: 0; Margin: 0 0 0 40px;"> <!-- left and right margins only. Uppercase M hack for for Outlook -->
+																										<li style="Margin: 10px 0 10px 0;"><a class="art-title" style="border-bottom: 1px solid #dedede; font-size: 14px; font-weight: bold;" href="https://jnnp.bmj.com/content/89/9/970?utm_source=alert&utm_medium=email&utm_campaign=jnnp&utm_content=toc&utm_term=11092018">Randomised controlled trial of a self-guided online fatigue intervention in multiple sclerosis</a><br />
+														<span style="font-family: 'Roboto Slab', serif; font-size: 13px; color: #707070; font-style: italic;">
+                                                                                                                Jana Pöttgen, Rona Moss-Morris, Janina-Maria Wendebourg et al.
+														                                                    </span></li>
+																										<li style="Margin: 10px 0 10px 0;"><a class="art-title" style="border-bottom: 1px solid #dedede; font-size: 14px; font-weight: bold;" href="https://jnnp.bmj.com/content/89/9/977?utm_source=alert&utm_medium=email&utm_campaign=jnnp&utm_content=toc&utm_term=11092018">Brain microstructural injury occurs in patients with RRMS despite ‘no evidence of disease activity’</a><br />
+														<span style="font-family: 'Roboto Slab', serif; font-size: 13px; color: #707070; font-style: italic;">
+                                                                                                                Asaff Harel, Dylan Sperling, Maria Petracca et al.
+														                                                    </span></li>
+																									</ul>
+
+																								<h3 id="section-8" style="font-family: 'Roboto Slab', serif; color: #669933  ; font-size: 20px; margin-top: 10px;">Epilepsy</h3>
+												<ul style="padding: 0; Margin: 0 0 0 40px;"> <!-- left and right margins only. Uppercase M hack for for Outlook -->
+																										<li style="Margin: 10px 0 10px 0;"><a class="art-title" style="border-bottom: 1px solid #dedede; font-size: 14px; font-weight: bold;" href="https://jnnp.bmj.com/content/89/9/983?utm_source=alert&utm_medium=email&utm_campaign=jnnp&utm_content=toc&utm_term=11092018">Emilia-Romagna Study on Pregnancy and Exposure to Antiepileptic drugs (ESPEA): a population-based study on prescription patterns, pregnancy outcomes and fetal health</a><br />
+														<span style="font-family: 'Roboto Slab', serif; font-size: 13px; color: #707070; font-style: italic;">
+                                                                                                                Barbara Mostacci, Francesca Bisulli, Elisabetta Poluzzi et al.
+														                                                    </span></li>
+																									</ul>
+
+																								<h3 id="section-9" style="font-family: 'Roboto Slab', serif; color: #669933  ; font-size: 20px; margin-top: 10px;">Movement disorders</h3>
+												<ul style="padding: 0; Margin: 0 0 0 40px;"> <!-- left and right margins only. Uppercase M hack for for Outlook -->
+																										<li style="Margin: 10px 0 10px 0;"><a class="art-title" style="border-bottom: 1px solid #dedede; font-size: 14px; font-weight: bold;" href="https://jnnp.bmj.com/content/89/9/989?utm_source=alert&utm_medium=email&utm_campaign=jnnp&utm_content=toc&utm_term=11092018">Long-term effect of low frequency stimulation of STN on dysphagia, freezing of gait and other motor symptoms in PD</a><br />
+														<span style="font-family: 'Roboto Slab', serif; font-size: 13px; color: #707070; font-style: italic;">
+                                                                                                                Tao Xie, Lisa Bloom, Mahesh Padmanaban et al.
+														                                                    </span></li>
+																									</ul>
+
+																								<h3 id="section-10" style="font-family: 'Roboto Slab', serif; color: #669933  ; font-size: 20px; margin-top: 10px;">Cognitive neurology</h3>
+												<ul style="padding: 0; Margin: 0 0 0 40px;"> <!-- left and right margins only. Uppercase M hack for for Outlook -->
+																										<li style="Margin: 10px 0 10px 0;"><a class="art-title" style="border-bottom: 1px solid #dedede; font-size: 14px; font-weight: bold;" href="https://jnnp.bmj.com/content/89/9/995?utm_source=alert&utm_medium=email&utm_campaign=jnnp&utm_content=toc&utm_term=11092018">The cognitive profile of behavioural variant FTD and its similarities with ALS: a systematic review and meta-analysis</a><br />
+														<span style="font-family: 'Roboto Slab', serif; font-size: 13px; color: #707070; font-style: italic;">
+                                                                                                                Emma Beeldman, Joost Raaphorst, Michelle Klein Twennaar et al.
+														                                                    </span></li>
+																									</ul>
+
+																								<h3 id="section-11" style="font-family: 'Roboto Slab', serif; color: #669933  ; font-size: 20px; margin-top: 10px;">PostScript</h3>
+												<ul style="padding: 0; Margin: 0 0 0 40px;"> <!-- left and right margins only. Uppercase M hack for for Outlook -->
+																										<li style="Margin: 10px 0 10px 0;"><a class="art-title" style="border-bottom: 1px solid #dedede; font-size: 14px; font-weight: bold;" href="https://jnnp.bmj.com/content/89/9/1003?utm_source=alert&utm_medium=email&utm_campaign=jnnp&utm_content=toc&utm_term=11092018">A remotely supervised home-based aerobic exercise programme is feasible for patients with Parkinson’s disease: results of a small randomised feasibility trial</a><br />
+														<span style="font-family: 'Roboto Slab', serif; font-size: 13px; color: #707070; font-style: italic;">
+                                                                                                                Nicolien M van der Kolk, Nienke M de Vries, Amanda L Penko et al.
+														                                                    </span></li>
+																										<li style="Margin: 10px 0 10px 0;"><a class="art-title" style="border-bottom: 1px solid #dedede; font-size: 14px; font-weight: bold;" href="https://jnnp.bmj.com/content/89/9/1005?utm_source=alert&utm_medium=email&utm_campaign=jnnp&utm_content=toc&utm_term=11092018">Non-office-hours admission affects intravenous thrombolysis treatment times and clinical outcome</a><br />
+														<span style="font-family: 'Roboto Slab', serif; font-size: 13px; color: #707070; font-style: italic;">
+                                                                                                                Thomas P Zonneveld, Sami Curtze, Sanne M Zinkstok et al.
+														                                                    </span></li>
+																										<li style="Margin: 10px 0 10px 0;"><a class="art-title" style="border-bottom: 1px solid #dedede; font-size: 14px; font-weight: bold;" href="https://jnnp.bmj.com/content/89/9/1007?utm_source=alert&utm_medium=email&utm_campaign=jnnp&utm_content=toc&utm_term=11092018">High prevalence of the MYD88 L265P mutation in IgM anti-MAG paraprotein-associated peripheral neuropathy</a><br />
+														<span style="font-family: 'Roboto Slab', serif; font-size: 13px; color: #707070; font-style: italic;">
+                                                                                                                Josephine Mathilde Vos, Nicolette C Notermans, Shirley D’Sa et al.
+														                                                    </span></li>
+																										<li style="Margin: 10px 0 10px 0;"><a class="art-title" style="border-bottom: 1px solid #dedede; font-size: 14px; font-weight: bold;" href="https://jnnp.bmj.com/content/89/9/1009?utm_source=alert&utm_medium=email&utm_campaign=jnnp&utm_content=toc&utm_term=11092018">Adult-onset biotinidase deficiency: two individuals with severe, but reversible optic neuropathy</a><br />
+														<span style="font-family: 'Roboto Slab', serif; font-size: 13px; color: #707070; font-style: italic;">
+                                                                                                                Romain Deschamps, Julien Savatovsky, Catherine Vignal et al.
+														                                                    </span></li>
+																										<li style="Margin: 10px 0 10px 0;"><a class="art-title" style="border-bottom: 1px solid #dedede; font-size: 14px; font-weight: bold;" href="https://jnnp.bmj.com/content/89/9/1011?utm_source=alert&utm_medium=email&utm_campaign=jnnp&utm_content=toc&utm_term=11092018">Multidisciplinary clinic for functional movement disorders (FMD): 1-year experience from a single centre</a><br />
+														<span style="font-family: 'Roboto Slab', serif; font-size: 13px; color: #707070; font-style: italic;">
+                                                                                                                Alexandra E Jacob, Courtney A Smith, Megan E Jablonski et al.
+														                                                    </span></li>
+																									</ul>
+
+												
+
+	                                    </td>
+	                                </tr>
+								</table>
+
+	                        </td>
+	                        <!-- Column : END -->
+	        </tr>
+	        <!-- 3 Even Columns : END -->
+
+	        <!-- Thumbnail Left, Text Right : BEGIN -->
+	        <tr>
+	            <td dir="ltr" valign="top" width="100%" style="padding: 10px; text-align: center">
+	                <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+	                    <tr>
+	                        <!-- Column : BEGIN -->
+	                        <td class="stack-column-center">
+	                            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: -40px !important;">
+	                                <tr>
+	                                    <td dir="ltr" valign="top">
+	                                        <a href="https://oas.services.bmj.com/RealMedia/ads/click_nx.ads/jnnp/189713469@Middle1?_RM_NX_ID_=myemail@email.com_189713469" target="_blank">
+												<img src="https://oas.services.bmj.com/RealMedia/ads/adstream_nx.ads/jnnp/189713469@Middle1?_RM_NX_ID_=myemail@email.com_189713469" border=0> </a>
+	                                    </td>
+	                                </tr>
+	                            </table>
+	                        </td>
+
+	                    </tr>
+	                </table>
+	            </td>
+	        </tr>
+	        <!-- Thumbnail Left, Text Right : END -->
+
+
+	        <tr>
+	            <td aria-hidden="true" height="40" style="font-size: 0px; line-height: 0px;">
+	                &nbsp;
+	            </td>
+	        </tr>
+	        <tr>
+					<div>
+							<table style="background-color: #669933 ;" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+								<tr>
+									<td valign="middle" style="text-align: left; padding: 20px 40px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #fff;">
+											<i class="fas fa-user-edit" style="float: left; padding-top: 20px; font-size: 33px; border-bottom: none; color: #fff"></i><h2 style="display: inline-block; font-family: 'Roboto Slab', serif; color: #fff; font-weight: normal; font-size: 34px; margin-bottom: 0;">Authors</h2>
+										<p style="margin: 20px 0 0 0;"><span style="text-transform: uppercase;">Journal of Neurology, Neurosurgery & Psychiatry</span> accepts submissions of a wide range of article types, including review articles and original research. The Author Information section provides specific article requirements to help you turn your research into an article suitable for <span style="text-transform: uppercase;">Journal of Neurology, Neurosurgery & Psychiatry</span>. Information is also provided on editorial policies and open access.</p>
+
+										<p style="text-align: center;"><a class="button-a button-a-primary" href="https://jnnp.bmj.com/pages/authors" style="background: #fff; font-family: sans-serif; font-size: 15px;line-height: 15px; text-decoration: none; padding: 13px 17px; color: #2a6ebb ; display: inline-block; border-radius: 4px; max-width: 150px;">Author information</a>&nbsp;&nbsp;&nbsp;<a class="button-a button-a-primary" href="http://mc.manuscriptcentral.com/" style="background: #fff; font-family: sans-serif; font-size: 15px; line-height: 15px; text-decoration: none; padding: 13px 17px; color: #2a6ebb; display: inline-block; border-radius: 4px; max-width: 150px;">Submit a paper</a></p>
+
+									</td>
+								</tr>
+							</table>
+						</div>
+			</tr>
+	        <!-- <tr>
+	            <td style="background-color: #ffffff;">
+						<iframe src="https://jobs.bmj.com/widget/bootstrap/job/#i=222" id="mdgxWidgetiFrame" style="width: 99%; height: 797px !important; background: 0; border: 1px solid #fff;" frameBorder="1"></iframe>
+	            </td>
+			</tr> -->
+			<tr>
+					<td style="background-color: #ffffff;">
+						<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #ebebeb;">
+							<tr>
+								<td>
+
+									<!-- column 1 -->
+									<table align="center" class="column">
+										<tr>
+											<td>
+												<p class="">
+                                                    													<a href="https://www.facebook.com/JNNP.BMJ" style="padding: 8px; font-size: 16px; margin-bottom: 10px; text-decoration: none; color: #FFF !important; display: block; text-align: center; font-family: 'Roboto Slab'; background-color: #3B5998 !important;" >Facebook</a>
+                                                    
+                                                                                                        <a href="https://twitter.com/JNNP_BMJ" style="padding: 8px; font-size: 16px; margin-bottom: 10px; text-decoration: none; color: #FFF !important; display: block; text-align: center; font-family: 'Roboto Slab'; background-color: #1daced !important;" >Twitter</a>
+                                                    
+                                                                                                        <a href="https://blogs.bmj.com/jnnp/" style="padding: 8px; font-size: 16px; margin-bottom: 10px; text-decoration: none; color: #FFF !important; display: block; text-align: center; font-family: 'Roboto Slab'; background-color: #669933 !important;" ><span style="text-transform: uppercase;">Blog</a>
+                                                    
+                                                                                                        <a href="https://soundcloud.com/bmjpodcasts/sets/jnnp" style="padding: 8px; font-size: 16px; margin-bottom: 10px; text-decoration: none; color: #FFF !important; display: block; text-align: center; font-family: 'Roboto Slab'; background-color: #e4701d !important;" >Podcast</a>
+																										
+																										
+													                                                    <a href="https://www.youtube.com/user/JNNPBMJ" style="padding: 8px; font-size: 16px; margin-bottom: 10px; text-decoration: none; color: #FFF !important; display: block; text-align: center; font-family: 'Roboto Slab'; background-color: #ff0000 !important;" >Google +</a>
+																										
+													                                                </p>
+                                            </td>
+											</td>
+										</tr>
+									</table><!-- /column 1 -->
+
+
+									<span class="clear"></span>
+
+								</td>
+								<td>
+									<p style="font-size: 16px; font-family: 'Roboto Slab', serif; padding: 10px; margin-top: -12px;">
+										Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+										</p>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+	        <!-- 1 Column Text : END -->
+
+	    </table>
+	    <!-- Email Body : END -->
+
+	    <!-- Email Footer : BEGIN -->
+
+	    <!-- Email Footer : END -->
+
+	    <!-- Full Bleed Background Section : BEGIN -->
+
+	    <!-- Full Bleed Background Section : END -->
+
+    <!--[if mso | IE]>
+    </td>
+    </tr>
+    </table>
+    <![endif]-->
+    </center>
+</body>
+</html>
